@@ -13,3 +13,17 @@
 - 積分概念和理論, Newton-Leibniz 公式, 不定積分計算, 定積分計算, 積分的幾何和物理應用
 - 廣義積分概念, 收斂性判別
 - 常微分方程基本概念, 一階方程初等積分方法, 高階可降階方程, 高階線性方程理論和求解, 一階線性方程組
+
+Refer to [the syllabus](syllabus.pdf)
+
+## Evaluation
+
+- 20% Homework
+- 30% Midterm
+- 50% Final
+
+(to be confirmed after the midterm)
+
+## Comments
+
+- Feels a little bit too easy, but normal as a course for international students
