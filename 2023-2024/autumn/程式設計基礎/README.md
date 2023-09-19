@@ -33,6 +33,15 @@ Refer to [the syllabus](程式設計基礎敎學大綱.docx)
 
 見[課件](01_槪述_20230919.pdf)
 
+## 教材
+
+1. '程序設計基礎 (第 4 版)' 吳文虎, 徐明星, 鄔曉鈞 編著, 清華大學出版社, 2017
+2. '計算機語言與程序設計' 諶衛軍編著, 清華大學出版社, 2007 年 9 月
+
+### 主要參考書
+
+- The C Programming Language (2nd Edition), K & R (Kernighan and Ritchie). 雍俊海. C 程式設計. 北京: 清華大學出版社. 2017.
+
 ## Comments
 
 - The first class spended time on introducing the history of the C language
