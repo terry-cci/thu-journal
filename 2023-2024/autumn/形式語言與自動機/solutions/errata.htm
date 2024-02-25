@@ -1,0 +1,555 @@
+<html
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:w="urn:schemas-microsoft-com:office:word"
+  xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+  xmlns="http://www.w3.org/TR/REC-html40"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="ProgId" content="Word.Document" />
+    <meta name="Generator" content="Microsoft Word 11" />
+    <meta name="Originator" content="Microsoft Word 11" />
+    <link rel="File-List" href="errata.files/filelist.xml" />
+    <title>
+      Introduction to Automata Theory, Languages, and Computation: Errata/3nd
+      Printing
+    </title>
+    <o:SmartTagType
+      namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+      name="City"
+    />
+    <o:SmartTagType
+      namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+      name="place"
+    />
+    <o:SmartTagType
+      namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+      name="chsdate"
+    />
+    <!--[if gte mso 9
+      ]><xml>
+        <o:DocumentProperties>
+          <o:Author>wang</o:Author>
+          <o:Template>Normal</o:Template>
+          <o:LastAuthor>wangshengyuan</o:LastAuthor>
+          <o:Revision>6</o:Revision>
+          <o:TotalTime>4</o:TotalTime>
+          <o:Created>2002-01-23T01:35:00Z</o:Created>
+          <o:LastSaved>2011-11-19T08:22:00Z</o:LastSaved>
+          <o:Pages>2</o:Pages>
+          <o:Words>467</o:Words>
+          <o:Characters>2664</o:Characters>
+          <o:Company>wyy</o:Company>
+          <o:Lines>22</o:Lines>
+          <o:Paragraphs>6</o:Paragraphs>
+          <o:CharactersWithSpaces>3125</o:CharactersWithSpaces>
+          <o:Version>11.9999</o:Version>
+        </o:DocumentProperties>
+      </xml><!
+    [endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <w:WordDocument>
+          <w:SpellingState>Clean</w:SpellingState>
+          <w:GrammarState>Clean</w:GrammarState>
+          <w:DrawingGridVerticalSpacing>7.8 ��</w:DrawingGridVerticalSpacing>
+          <w:ValidateAgainstSchemas />
+          <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+          <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+          <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+          <w:Compatibility>
+            <w:UseFELayout />
+          </w:Compatibility>
+          <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+        </w:WordDocument>
+      </xml><!
+    [endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+        </w:LatentStyles> </xml
+    ><![endif]-->
+    <!--[if !mso
+      ]><object
+        classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D"
+        id="ieooui"
+      ></object>
+      <style>
+        st1\:* {
+          behavior: url(#ieooui);
+        }
+      </style>
+    <![endif]-->
+    <style>
+      <!--
+       /* Font Definitions */
+       @font-face
+      	{font-family: "Cambria Math";
+      	panose-1:2 1 6 0 3 1 1 1 1 1;
+      	mso-font-alt:SimSun;
+      	mso-font-charset:134;
+      	mso-generic-font-family:auto;
+      	mso-font-pitch:variable;
+      	mso-font-signature:3 135135232 16 0 262145 0;}
+      @font-face
+      	{font-family:"Cambria Math";
+      	panose-1:2 1 6 0 3 1 1 1 1 1;
+      	mso-font-charset:134;
+      	mso-generic-font-family:auto;
+      	mso-font-pitch:variable;
+      	mso-font-signature:3 135135232 16 0 262145 0;}
+       /* Style Definitions */
+       p.MsoNormal, li.MsoNormal, div.MsoNormal
+      	{mso-style-parent:"";
+      	margin:0cm;
+      	margin-bottom:.0001pt;
+      	mso-pagination:widow-orphan;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Geneva";}
+      a:link, span.MsoHyperlink
+      	{color:blue;
+      	text-decoration:underline;
+      	text-underline:single;}
+      a:visited, span.MsoHyperlinkFollowed
+      	{color:blue;
+      	text-decoration:underline;
+      	text-underline:single;}
+      p
+      	{mso-margin-top-alt:auto;
+      	margin-right:0cm;
+      	mso-margin-bottom-alt:auto;
+      	margin-left:0cm;
+      	mso-pagination:widow-orphan;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Geneva";}
+      pre
+      	{margin:0cm;
+      	margin-bottom:.0001pt;
+      	mso-pagination:widow-orphan;
+      	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Courier New";}
+      span.SpellE
+      	{mso-style-name:"";
+      	mso-spl-e:yes;}
+      span.GramE
+      	{mso-style-name:"";
+      	mso-gram-e:yes;}
+       /* Page Definitions */
+       @page
+      	{mso-page-border-surround-header:no;
+      	mso-page-border-surround-footer:no;}
+      @page Section1
+      	{size:595.3pt 841.9pt;
+      	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+      	mso-header-margin:42.55pt;
+      	mso-footer-margin:49.6pt;
+      	mso-paper-source:0;}
+      div.Section1
+      	{page:Section1;}
+      -->
+    </style>
+    <!--[if gte mso 10]>
+      <style>
+        /* Style Definitions */
+        table.MsoNormalTable {
+          mso-style-name: ��ͨCambria Math;
+          mso-tstyle-rowband-size: 0;
+          mso-tstyle-colband-size: 0;
+          mso-style-noshow: yes;
+          mso-style-parent: "";
+          mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;
+          mso-para-margin: 0cm;
+          mso-para-margin-bottom: 0.0001pt;
+          mso-pagination: widow-orphan;
+          font-size: 10pt;
+          font-family: "Geneva";
+          mso-fareast-font-family: "Geneva";
+          mso-ansi-language: #0400;
+          mso-fareast-language: #0400;
+          mso-bidi-language: #0400;
+        }
+      </style>
+    <![endif]-->
+    <!--[if gte mso 9
+      ]><xml> <o:shapedefaults v:ext="edit" spidmax="1026" /> </xml
+    ><![endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <o:shapelayout v:ext="edit">
+          <o:idmap v:ext="edit" data="1" /> </o:shapelayout></xml
+    ><![endif]-->
+  </head>
+
+  <body
+    bgcolor="black"
+    lang="ZH-CN"
+    link="blue"
+    vlink="blue"
+    text="white"
+    style="tab-interval: 21pt"
+  >
+    <div class="Section1">
+      <div align="center">
+        <table
+          class="MsoNormalTable"
+          border="0"
+          cellpadding="0"
+          style="mso-cellspacing: 1.5pt; mso-padding-alt: 0cm 0cm 0cm 0cm"
+        >
+          <tr
+            style="
+              mso-yfti-irow: 0;
+              mso-yfti-firstrow: yes;
+              mso-yfti-lastrow: yes;
+            "
+          >
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal">
+                <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <span lang="EN-US" style="font-size: 24pt"
+                  >Introduction to Automata Theory, Languages, and Computation:
+                  Errata for the Third Printings</span
+                ><span lang="EN-US"> </span>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <p>
+        <span lang="EN-US"><span style="mso-spacerun: yes">&nbsp;</span></span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 196, l. 8: Delete ``the'' (Thanks to Ben Pfaff).
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 276, l. -2: quotes should appear after 'game' rather than
+          'follows' (Thanks to <span class="SpellE">Guray</span>
+          <span class="SpellE">Alsac</span>).
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 290, Eq. (7.1): The term Gamma for the stack alphabet is missing
+          (Thanks to <span class="SpellE">Chittaranjan</span>
+          <span class="SpellE">Tripathy</span>).
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 303, Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.4.5</st1:chsdate
+          >, l. 1: ``so can'' -&gt; ``to'' (Thanks to Christian
+          <span class="SpellE">Lemburg</span>).
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 316 last line of box: ``is'' needed before first ``<span
+            class="SpellE"
+            >undecidable</span
+          >'' (Thanks to Christian <span class="SpellE">Lemburg</span>).
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 321, l. 19: ``repeatedly'' -&gt; ``enters a loop in which it''
+          (Thanks to Christian <span class="SpellE">Lemburg</span>).
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 355, l. -6: ``we'' -&gt; ``be'' (Thanks to Jacinth H.T. Wu).
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 366, reference 3: The correct capitalization and diacritical marks
+          are: `\&quot;<span class="SpellE">Uber</span> formal
+          <span class="SpellE">unentscheidbare</span> S\&quot;<span
+            class="SpellE"
+            >atze</span
+          >
+          <span class="SpellE">der</span> Principia
+          <span class="SpellE">Mathematica</span> und
+          <span class="SpellE">verwandter</span>
+          <span class="SpellE">Systeme</span></span
+        >��<span lang="EN-US"
+          >, <span class="SpellE">Monatshefte</span> f\&quot;<st1:place
+            w:st="on"
+            ><st1:City w:st="on"
+              ><span class="SpellE"
+                ><span class="GramE">ur</span></span
+              ></st1:City
+            ></st1:place
+          >
+          <span class="SpellE">Mathematik</span> und
+          <span class="SpellE">Physik</span>,
+          <span class="SpellE">Monatshefte</span> f</span
+        >�r<span lang="EN-US">
+          <span class="SpellE">Mathematik</span> und
+          <span class="SpellE">Physik</span>'' (Thanks to J</span
+        >�r<span lang="EN-US"
+          >g <span class="SpellE">Bredno</span> and Christian
+          <span class="SpellE">Lemburg</span>).
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 379, l. 2: ``<span class="GramE">A</span> efficient'' -&gt; ``An
+          efficient'' (Thanks to <span class="SpellE">Chittaranjan</span>
+          <span class="SpellE">Tripathy</span>).
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 396, l. 7: the final pair should be ($,*$) (Thanks to
+          <span class="SpellE">Zeki</span> <span class="SpellE">Bayram</span>).
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 400, Fig. 9.15, Rule (3), lines 6-7: The # at the end of List B
+          for the transitions <span class="GramE"><i>delta(</i></span
+          ><i>q_2,0)</i> should not be there (Thanks to Ed Luke).
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 415, l. 15: ``that'' -&gt; ``than'' (Thanks to Christian
+          <span class="SpellE">Lemburg</span>).
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 422, beginning of Section
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >10.1.6</st1:chsdate
+          >: We do not need to say twice that <i>L</i> is in <i>NP</i> (Thanks
+          to Mustafa <span class="SpellE">Sait-Ametov</span>).
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 423, l. -10&quot; ``in'' -&gt; ``it'' (Thanks to Christian
+          <span class="SpellE">Lemburg</span>).
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >p. 432, bottom and 433, top: There is a case missing from the design
+          of <span class="SpellE"><i>B_ij</i></span
+          >. If the state of <span class="SpellE"><i>alpha_i</i></span> is
+          adjacent to position <i>j</i>, then neither
+          <i>A<span class="GramE">_{</span><span class="SpellE">ij</span>}</i>
+          nor <span class="SpellE"><i>B_ij</i></span> is true as stated. Thus,
+          we have to add terms that make
+          <span class="SpellE"><i>B_ij</i></span> true in that case. A succinct
+          form for <span class="SpellE"><i>B_ij</i></span> is:
+        </span>
+      </p>
+
+      <pre><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>(y<span
+class=GramE>_{</span>i,j-1,q1} OR ... OR y_{i,j-1,qm}) OR /* state to left */</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>(y<span
+class=GramE>_{</span>i,j+1,q1} OR ... OR y_{i,j+1,qm}) OR /* state to right */</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>((y<span
+class=GramE>_{</span>i,j,Z1} OR ... OR y_{<span class=SpellE>i,j,Zr</span>}) AND<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>/* state at least 2 positions away</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=FR style='mso-ansi-language:FR'>((y_{i,j,Z1} AND y_{i+1,j,Z1}) OR ... </span><span
+lang=EN-US>OR (y_{<span class=SpellE>i,j,Zr</span>} AND y_{i+1,j,Zr})))</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/* and symbol doesn't change */</span></pre>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >(Thanks to <span class="SpellE">Zeki</span>
+          <span class="SpellE">Bayram</span>).
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >p. 433, l. -3: <span class="SpellE"><i>A_ij</i></span> should be
+          <span class="SpellE"><i>B_ij</i></span> (Thanks to Christian
+          <span class="SpellE">Lemburg</span>).
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >p. 435, Ex.
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >10.2.2</st1:chsdate
+          >, l. 3: quotes needed after <i>j.</i> (Thanks to Mustafa
+          <span class="SpellE">Sait-Ametov</span>).
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >p. 445, item 1, l. 1: no capital for ``Introduce'' (Thanks to
+          Christian <span class="SpellE">Lemburg</span>).
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >p. 452, l. -16, -15: The edge-cover problem is really polynomial-time
+          (Thanks to Christian <span class="SpellE">Lemburg</span>).
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >p. 458, l. -2: Capitalize ``<st1:City w:st="on"
+            ><st1:place w:st="on">Hamilton</st1:place></st1:City
+          >'' (Thanks to Mustafa <span class="SpellE">Sait-Ametov</span>).
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >p. 465, l. -18: ``time limit'' needs quotation marks around it
+          (Thanks to Christian <span class="SpellE">Lemburg</span>).
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >p. 475, l. 6 of proof of <span class="SpellE">Theprem</span> 11.4:
+          right parenthesis missing at end of exponent on <i>c</i> (Thanks to
+          <span class="SpellE">Chittaranjan</span>
+          <span class="SpellE">Tripathy</span>).
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Also, thanks to Darren Brown, David
+          <span class="SpellE">Brumley</span>, Michael
+          <span class="SpellE">Dautermann</span>, Gabor Hardy, Troy Landers,
+          Terry Lewis, Heather <span class="SpellE">Mahaney</span>,
+          <span class="SpellE">Prashant</span> Shah, Jackie Song, Alexei
+          Stanger, Rod <span class="SpellE">Topor</span>,
+          <span class="SpellE">Paavo</span>
+          <span class="SpellE">Turakainen</span>, Tom Whaley, Jacinth H.T. Wu,
+          and Ivan <span class="SpellE">Zdanov</span> for correcting errors in
+          the posted solutions.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"><a href="index.htm">Return to Home</a></span>
+      </p>
+    </div>
+  </body>
+</html>

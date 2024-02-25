@@ -1,0 +1,1416 @@
+<html
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:w="urn:schemas-microsoft-com:office:word"
+  xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+  xmlns="http://www.w3.org/TR/REC-html40"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="ProgId" content="Word.Document" />
+    <meta name="Generator" content="Microsoft Word 11" />
+    <meta name="Originator" content="Microsoft Word 11" />
+    <link rel="File-List" href="s_chapter9.files/filelist.xml" />
+    <title>
+      Introduction to Automata Theory, Languages, and Computation: Solutions for
+      Chapter 9
+    </title>
+    <o:SmartTagType
+      namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+      name="chmetcnv"
+    />
+    <o:SmartTagType
+      namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+      name="chsdate"
+    />
+    <!--[if gte mso 9
+      ]><xml>
+        <o:DocumentProperties>
+          <o:Author>wang</o:Author>
+          <o:Template>Normal</o:Template>
+          <o:LastAuthor>wangshengyuan</o:LastAuthor>
+          <o:Revision>8</o:Revision>
+          <o:TotalTime>4</o:TotalTime>
+          <o:Created>2002-01-23T01:45:00Z</o:Created>
+          <o:LastSaved>2011-11-19T08:17:00Z</o:LastSaved>
+          <o:Pages>5</o:Pages>
+          <o:Words>1664</o:Words>
+          <o:Characters>9485</o:Characters>
+          <o:Company>wyy</o:Company>
+          <o:Lines>79</o:Lines>
+          <o:Paragraphs>22</o:Paragraphs>
+          <o:CharactersWithSpaces>11127</o:CharactersWithSpaces>
+          <o:Version>11.9999</o:Version>
+        </o:DocumentProperties>
+      </xml><!
+    [endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <w:WordDocument>
+          <w:GrammarState>Clean</w:GrammarState>
+          <w:DrawingGridVerticalSpacing>7.8 ��</w:DrawingGridVerticalSpacing>
+          <w:ValidateAgainstSchemas />
+          <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+          <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+          <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+          <w:Compatibility>
+            <w:UseFELayout />
+          </w:Compatibility>
+          <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+        </w:WordDocument>
+      </xml><!
+    [endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+        </w:LatentStyles> </xml
+    ><![endif]-->
+    <!--[if !mso
+      ]><object
+        classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D"
+        id="ieooui"
+      ></object>
+      <style>
+        st1\:* {
+          behavior: url(#ieooui);
+        }
+      </style>
+    <![endif]-->
+    <style>
+      <!--
+       /* Font Definitions */
+       @font-face
+      	{font-family: "Cambria Math";
+      	panose-1:2 1 6 0 3 1 1 1 1 1;
+      	mso-font-alt:SimSun;
+      	mso-font-charset:134;
+      	mso-generic-font-family:auto;
+      	mso-font-pitch:variable;
+      	mso-font-signature:3 135135232 16 0 262145 0;}
+      @font-face
+      	{font-family:"Cambria Math";
+      	panose-1:2 1 6 0 3 1 1 1 1 1;
+      	mso-font-charset:134;
+      	mso-generic-font-family:auto;
+      	mso-font-pitch:variable;
+      	mso-font-signature:3 135135232 16 0 262145 0;}
+       /* Style Definitions */
+       p.MsoNormal, li.MsoNormal, div.MsoNormal
+      	{mso-style-parent:"";
+      	margin:0cm;
+      	margin-bottom:.0001pt;
+      	mso-pagination:widow-orphan;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Geneva";}
+      a:link, span.MsoHyperlink
+      	{color:blue;
+      	text-decoration:underline;
+      	text-underline:single;}
+      a:visited, span.MsoHyperlinkFollowed
+      	{color:blue;
+      	text-decoration:underline;
+      	text-underline:single;}
+      p
+      	{mso-margin-top-alt:auto;
+      	margin-right:0cm;
+      	mso-margin-bottom-alt:auto;
+      	margin-left:0cm;
+      	mso-pagination:widow-orphan;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Geneva";}
+      pre
+      	{margin:0cm;
+      	margin-bottom:.0001pt;
+      	mso-pagination:widow-orphan;
+      	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Courier New";}
+       /* Page Definitions */
+       @page
+      	{mso-page-border-surround-header:no;
+      	mso-page-border-surround-footer:no;}
+      @page Section1
+      	{size:595.3pt 841.9pt;
+      	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+      	mso-header-margin:42.55pt;
+      	mso-footer-margin:49.6pt;
+      	mso-paper-source:0;}
+      div.Section1
+      	{page:Section1;}
+       /* List Definitions */
+       @list l0
+      	{mso-list-id:80152512;
+      	mso-list-type:hybrid;
+      	mso-list-template-ids:568482440 -2000105448 -1594833952 -385473220 -509189560 -987234104 1868045014 -713407372 -1735750792 330193336;}
+      @list l0:level1
+      	{mso-level-tab-stop:36.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level2
+      	{mso-level-tab-stop:72.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level3
+      	{mso-level-tab-stop:108.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level4
+      	{mso-level-tab-stop:144.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level5
+      	{mso-level-tab-stop:180.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level6
+      	{mso-level-tab-stop:216.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level7
+      	{mso-level-tab-stop:252.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level8
+      	{mso-level-tab-stop:288.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level9
+      	{mso-level-tab-stop:324.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l1
+      	{mso-list-id:692730313;
+      	mso-list-type:hybrid;
+      	mso-list-template-ids:227041566 1021997068 408435526 1063296510 -1228512254 -123457160 1374820582 2071780176 1209931808 -62771480;}
+      @list l1:level1
+      	{mso-level-tab-stop:36.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l1:level2
+      	{mso-level-tab-stop:72.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l1:level3
+      	{mso-level-tab-stop:108.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l1:level4
+      	{mso-level-tab-stop:144.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l1:level5
+      	{mso-level-tab-stop:180.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l1:level6
+      	{mso-level-tab-stop:216.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l1:level7
+      	{mso-level-tab-stop:252.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l1:level8
+      	{mso-level-tab-stop:288.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l1:level9
+      	{mso-level-tab-stop:324.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2
+      	{mso-list-id:1101071856;
+      	mso-list-type:hybrid;
+      	mso-list-template-ids:-176107020 -108733996 1045869986 -1621353656 -133632670 2012120410 1304440352 303360568 116267206 -819415154;}
+      @list l2:level1
+      	{mso-level-tab-stop:36.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level2
+      	{mso-level-tab-stop:72.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level3
+      	{mso-level-tab-stop:108.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level4
+      	{mso-level-tab-stop:144.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level5
+      	{mso-level-tab-stop:180.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level6
+      	{mso-level-tab-stop:216.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level7
+      	{mso-level-tab-stop:252.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level8
+      	{mso-level-tab-stop:288.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level9
+      	{mso-level-tab-stop:324.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3
+      	{mso-list-id:1855221678;
+      	mso-list-type:hybrid;
+      	mso-list-template-ids:1310512694 1573703646 -64476808 1398178538 -597780860 -745244920 199384986 831809524 -1831191388 -1254573912;}
+      @list l3:level1
+      	{mso-level-tab-stop:36.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level2
+      	{mso-level-tab-stop:72.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level3
+      	{mso-level-tab-stop:108.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level4
+      	{mso-level-tab-stop:144.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level5
+      	{mso-level-tab-stop:180.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level6
+      	{mso-level-tab-stop:216.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level7
+      	{mso-level-tab-stop:252.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level8
+      	{mso-level-tab-stop:288.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level9
+      	{mso-level-tab-stop:324.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l4
+      	{mso-list-id:2026325764;
+      	mso-list-type:hybrid;
+      	mso-list-template-ids:899035398 111413418 -858722456 748715186 926695580 -39420284 -264756058 1396332854 -150278204 -823337840;}
+      @list l4:level1
+      	{mso-level-tab-stop:36.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l4:level2
+      	{mso-level-tab-stop:72.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l4:level3
+      	{mso-level-tab-stop:108.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l4:level4
+      	{mso-level-tab-stop:144.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l4:level5
+      	{mso-level-tab-stop:180.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l4:level6
+      	{mso-level-tab-stop:216.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l4:level7
+      	{mso-level-tab-stop:252.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l4:level8
+      	{mso-level-tab-stop:288.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l4:level9
+      	{mso-level-tab-stop:324.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      ol
+      	{margin-bottom:0cm;}
+      ul
+      	{margin-bottom:0cm;}
+      -->
+    </style>
+    <!--[if gte mso 10]>
+      <style>
+        /* Style Definitions */
+        table.MsoNormalTable {
+          mso-style-name: ��ͨCambria Math;
+          mso-tstyle-rowband-size: 0;
+          mso-tstyle-colband-size: 0;
+          mso-style-noshow: yes;
+          mso-style-parent: "";
+          mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;
+          mso-para-margin: 0cm;
+          mso-para-margin-bottom: 0.0001pt;
+          mso-pagination: widow-orphan;
+          font-size: 10pt;
+          font-family: "Geneva";
+          mso-fareast-font-family: "Geneva";
+          mso-ansi-language: #0400;
+          mso-fareast-language: #0400;
+          mso-bidi-language: #0400;
+        }
+      </style>
+    <![endif]-->
+    <!--[if gte mso 9
+      ]><xml> <o:shapedefaults v:ext="edit" spidmax="1026" /> </xml
+    ><![endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <o:shapelayout v:ext="edit">
+          <o:idmap v:ext="edit" data="1" /> </o:shapelayout></xml
+    ><![endif]-->
+  </head>
+
+  <body
+    bgcolor="black"
+    lang="ZH-CN"
+    link="blue"
+    vlink="blue"
+    text="white"
+    style="tab-interval: 21pt"
+  >
+    <div class="Section1">
+      <div align="center">
+        <table
+          class="MsoNormalTable"
+          border="0"
+          cellpadding="0"
+          style="mso-cellspacing: 1.5pt; mso-padding-alt: 0cm 0cm 0cm 0cm"
+        >
+          <tr
+            style="
+              mso-yfti-irow: 0;
+              mso-yfti-firstrow: yes;
+              mso-yfti-lastrow: yes;
+            "
+          >
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal">
+                <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <span lang="EN-US" style="font-size: 24pt"
+                  >Introduction to Automata Theory, Languages, and
+                  Computation</span
+                ><span lang="EN-US"> </span>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <h2 align="center" style="text-align: center">
+        <a name="top"></a><span lang="EN-US">Solutions for Chapter 9</span>
+      </h2>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >Revised
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="1"
+            Month="2"
+            Year="2005"
+            w:st="on"
+            >5/2/01</st1:chsdate
+          >.
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"><span style="mso-spacerun: yes">&nbsp;</span></span>
+      </p>
+
+      <h2>
+        <a name="sol91"></a><span lang="EN-US">Solutions for Section 9.1</span>
+      </h2>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.1.1</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <st1:chmetcnv
+          TCSC="0"
+          NumberType="1"
+          Negative="False"
+          HasSpace="True"
+          SourceValue="37"
+          UnitName="in"
+          w:st="on"
+          ><span lang="EN-US">37 in</span></st1:chmetcnv
+        ><span lang="EN-US">
+          binary is 100101. Remove the leading 1 to get the string 00101, which
+          is thus <i>w_37</i>.
+        </span>
+      </p>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.1.3</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >Suppose this language were accepted by some TM <i>M</i>. We need to
+          find an <i>i</i> such that <i>M = M_{2i}</i>. Fortunately, since all
+          the codes for TM's end in a 0, that is not a problem; we just convert
+          the specification for <i>M</i> to a code in the manner described in
+          the section.
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >We then ask if <i>w_i</i> is accepted by <i>M_{2i}</i>? If so, then
+          <i>w_i</i> is not accepted by <i>M</i>, and therefore not accepted by
+          <i>M_{2i}</i>, which is the same TM. Similarly, if <i>w_i</i> is not
+          accepted by <i>M_{2i}</i>, then <i>w_i</i> is accepted by <i>M</i>,
+          and therefore by <i>M_{2i}</i>. Either way, we reach a contradiction,
+          and conclude that <i>M</i> does not exist.
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+
+      <h2>
+        <a name="sol92"></a><span lang="EN-US">Solutions for Section 9.2</span>
+      </h2>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.2.2</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <i><span lang="EN-US">A(2,1) = A(A(1,1),0)</span></i
+        ><span lang="EN-US">
+          [rule 4] = <i>A(A(A(0,1),0),0)</i> [rule 4] = <i>A(A(1,0),0)</i> [rule
+          1] = <i>A(2,0)</i> [rule 2] = 4 [rule 3].
+        </span>
+      </p>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.2.3</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >Let's keep <i>i</i>, the integer in unary, whose square we have most
+          recently printed on the output tape, on tape 1, and keep <i>i^2</i> on
+          tape 2, also in unary. Initially, <i>i = 0</i>. Repeatedly do the
+          following:
+        </span>
+      </p>
+
+      <ol start="1" type="1">
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l4 level1 lfo1;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >Add 1 to tape 1; now we have <i>i+1</i> there.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l4 level1 lfo1;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >Copy tape 1 to tape 2 twice, and remove one to change <i>i^2</i> to
+            <i>i^2 + 2(i+1) - 1 = (i+1)^2</i>.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l4 level1 lfo1;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >Copy tape 2 to the output as a block of 0's and append a 1.
+          </span>
+        </li>
+      </ol>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.2.4</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >By symmetry, if we can prove <i>L_1</i> is recursive, we can prove
+          any of the languages to be recursive. Take TM's
+          <i>M_1, M_2,...,M_k</i> for each of the languages
+          <i>L_1, L_2,...,L_k</i>, respectively. Design a TM <i>M</i> with
+          <i>k</i> tapes that accepts <i>L_1</i> and always halts.
+          <i>M</i> copies its input to all the tapes and simulates <i>M_I</i> on
+          the <i>i</i>th tape. If <i>M_1</i> accepts, then <i>M</i> accepts. If
+          any of the other TM's accepts, <i>M</i> halts without accepting. Since
+          exactly one of the <i>M_i</i>'s will accept, <i>M</i> is sure to halt.
+        </span>
+      </p>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.2.5</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >Note that the new language defined in the displayed text should be
+          <i>L'</i>; it is different from the given language <i>L</i>, of
+          course. Also, we'll use <i>-L</i> for the complement of <i>L</i> in
+          what follows.
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >Suppose <i>L'</i> were RE. Then we could design a TM <i>M</i> for
+          <i>-L</i> as follows. Given input <i>w, M</i> changes its input to
+          <i>1w</i> and simulates the hypothetical TM for <i>L'</i>. If that TM
+          accepts, then <i>w</i> is in <i>-L</i>, so <i>M</i> should accept. If
+          the TM for <i>L'</i> never accepts, then neither does <i>M</i>. Thus,
+          <i>M</i> would accept exactly <i>-L</i>, which contradicts the fact
+          that <i>-L</i> is not RE. We conclude that <i>L'</i> is not RE.
+        </span>
+      </p>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.2.6</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >To test whether an input <i>w</i> is in the union of two recursive
+          languages <i>L1</i> and <i>L2</i>, we design a TM to copy its input
+          <i>w</i> onto a second tape. It then simulates the halting TM for
+          <i>L1</i> on one tape and the halting TM for <i>L2</i> on the other.
+          If either accepts, then we accept. If both halt without accepting, we
+          halt without accepting. Thus, the union is accepted by a TM that
+          always halts.
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >In the case where <i>L1</i> and <i>L2</i> are RE, do the same, and
+          accept if either accepts. The resulting TM accepts the union, although
+          it may not halt. We conclude that both the recursive languages and the
+          RE languages are closed under union.
+        </span>
+      </p>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.2.6</st1:chsdate
+          >(e)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >Consider the case where <i>L</i> is RE. Design a NTM <i>M</i> for
+          <i>h(L)</i>, as follows. Suppose <i>w</i> is the input to <i>M</i>. On
+          a second tape, <i>M</i> guesses some string <i>x</i> over the alphabet
+          of <i>L</i>, checks that <i>h(x) = w</i>, and simulates the TM for
+          <i>L</i> on <i>x</i>, if so. If <i>x</i> is accepted, then
+          <i>M</i> accepts <i>w</i>. We conclude that the RE languages are
+          closed under homomorphism.
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >However, the recursive languages are not closed under homomorphism.
+          To see why, consider the particular language <i>L</i> consisting of
+          strings of the form <i>(M,w,c^i)</i>, where <i>M</i> is a coded Turing
+          machine with binary input alphabet, <i>w</i> is a binary string, and
+          <i>c</i> is a symbol not appearing elsewhere. The string is in
+          <i>L</i> if and only if <i>M</i> accepts <i>w</i> after making at most
+          <i>i</i> moves. Clearly <i>L</i> is recursive; we may simulate
+          <i>M</i> on <i>w</i> for <i>i</i> moves and then decide whether or not
+          to accept. However, if we apply to <i>L</i> the homomorphism that maps
+          the symbols other than <i>c</i> to themselves, and maps <i>c</i> to
+          epsilon, we find that <i>h(L)</i> is the universal language, which we
+          called <i>L_u</i>. We know that <i>L_u</i> is not recursive.
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+
+      <h2>
+        <a name="sol93"></a><span lang="EN-US">Solutions for Section 9.3</span>
+      </h2>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.3.1</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >The property of languages ``contains all the palindromes'' is a
+          nontrivial property, since some languages do and others don't. Thus,
+          by Rice's theorem, the question is undecidable.
+        </span>
+      </p>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.3.4</st1:chsdate
+          >(d)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >We shall reduce the problem <i>L_e</i> (does a TM accept the empty
+          language?) to the question at hand: does a TM accept a language that
+          is its own reverse? Given a TM <i>M</i>, we shall construct a
+          nondeterministic TM <i>M'</i>, which accepts either the empty language
+          (which is its own reverse), or the language {10} (which is not its own
+          reverse). We shall make sure that if <i>L(M)</i> is empty, then
+          <i>L(M')</i> is its own reverse (the emoty language, in particular),
+          and if <i>L(M)</i> is not empty, then <i>L(M')</i> is not its own
+          reverse. <i>M'</i> works as follows:
+        </span>
+      </p>
+
+      <ol start="1" type="1">
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l0 level1 lfo2;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >First, check that its input is 10, and reject if not.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l0 level1 lfo2;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US">Guess an input <i>w</i> for <i>M</i>. </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l0 level1 lfo2;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >Simulate <i>M</i> on <i>w</i>. If <i>M</i> accepts, then
+            <i>M'</i> accepts its own input, 01.
+          </span>
+        </li>
+      </ol>
+
+      <p>
+        <span lang="EN-US"
+          >Thus, if <i>L(M)</i> is nonempty, <i>M'</i> will guess some string
+          <i>M</i> accepts and therefore accept 01. If <i>L(M)</i> is empty,
+          then all guesses by <i>M'</i> fail to lead to acceptance by <i>M</i>,
+          so <i>M'</i> never accepts 01 or any other string.
+        </span>
+      </p>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.3.6</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >After making <i>m</i> transitions (not <i>m+1</i> as suggested by the
+          hint), the TM will have been in <i>m+1</i> different states. These
+          states cannot all be different. Thus, we can find some repeating
+          state, and the moves of the TM look like
+          <i>[q_0] |-* q |-* q |-* ...</i>, where the central |-* represents at
+          least one move. Note that we assume the tape remains blank; if not
+          then we know the TM eventually prints a nonblank. However, if it
+          enters a loop without printing a nonblank, then it will remain forever
+          in that loop and never print a nonblank. Thus, we can decide whether
+          the TM ever prints a nonblank by simulating it for <i>M</i> moves, and
+          saying ``yes'' if and only if it prints a nonblank during that
+          sequence of moves.
+        </span>
+      </p>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.3.7</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >We reduce the complement of <i>L_u</i> to this problem, which is the
+          complement of the halting problem for Turing Machines. The crux of the
+          argument is that we can convert any TM <i>M</i> into another TM
+          <i>M'</i>, such that <i>M'</i> halts on input <i>w</i> if and only if
+          <i>M</i> accepts <i>w</i>. The construction of <i>M'</i> from
+          <i>M</i> is as follows:
+        </span>
+      </p>
+
+      <ol start="1" type="1">
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l2 level1 lfo3;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >Make sure that <i>M'</i> does not halt unless <i>M</i> accepts.
+            Thus, add to the states of <i>M</i> a new state <i>p</i>, in which
+            <i>M'</i> runs right, forever; i.e., <i>delta(p,X) = (p,X,R)</i> for
+            all tape symbols <i>X</i>. If <i>M</i> would halt without accepting,
+            say <i>delta(q,Y)</i> is undefined for some nonaccepting state
+            <i>q</i>, then in <i>M'</i>, make <i>delta(q,Y) = (p,Y,R)</i>; i.e.,
+            enter the right-moving state and make sure <i>M'</i> does not halt.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l2 level1 lfo3;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >If <i>M</i> accepts, then <i>M'</i> must halt. Thus, if <i>q</i> is
+            an accepting state of <i>M</i>, then in <i>M'</i>,
+            <i>delta(q,X)</i> is made undefined for all tape symbols <i>X</i>.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l2 level1 lfo3;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >Otherwise, the moves of <i>M'</i> are the same as those of
+            <i>M</i>.
+          </span>
+        </li>
+      </ol>
+
+      <p>
+        <span lang="EN-US"
+          >The above construction reduces the complement of <i>L_u</i> to the
+          complement of the halting problem. That is, if <i>M</i> accepts
+          <i>w</i>, then <i>M'</i> halts on <i>w</i>, and if not, then not.
+          Since the complement of <i>L_u</i> is non-RE, so is the complement of
+          the halting problem.
+        </span>
+      </p>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.3.8</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >We'll show this problem not to be RE by reducing the problem of
+          Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.3.7</st1:chsdate
+          >(a), the ``nonhalting'' problem to it. Given a pair <i>(M,w)</i>, we
+          must construct a TM <i>M'</i>, such that <i>M'</i> halts on every
+          input if and only if <i>M</i> does not halt on <i>w</i>. Here is how
+          <i>M'</i> works:
+        </span>
+      </p>
+
+      <ol start="1" type="1">
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l1 level1 lfo4;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >Given an input <i>x</i> of length <i>n</i>, <i>M'</i> simulates
+            <i>M</i> on <i>w</i> for <i>n</i> steps.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l1 level1 lfo4;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >If during that time, <i>M</i> halts, then <i>M'</i> enters a
+            special looping state [as discussed in the solution to Exercise
+            <st1:chsdate
+              IsROCDate="False"
+              IsLunarDate="False"
+              Day="30"
+              Month="12"
+              Year="1899"
+              w:st="on"
+              >9.3.7</st1:chsdate
+            >(a)] and <i>M'</i> does not halt on its own input <i>x</i>.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l1 level1 lfo4;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >However, if <i>M</i> does not halt on <i>w</i> after
+            <i>n</i> steps, then <i>M'</i> halts.
+          </span>
+        </li>
+      </ol>
+
+      <p>
+        <span lang="EN-US"
+          >Thus, <i>M'</i> halts on all inputs if and only if <i>M</i> does not
+          halt on <i>w</i>. Since we proved in the solution to Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.3.7</st1:chsdate
+          >(a) that the problem of telling whether <i>M</i> does not halt on
+          <i>w</i> is non-RE, it follows that the question at hand --- whether a
+          given TM halts on all inputs --- must not be RE either.
+        </span>
+      </p>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.3.8</st1:chsdate
+          >(d)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >This language is the complement of the language of Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.3.8</st1:chsdate
+          >(a), so it is surely not recursive. But is it RE? We can show it
+          isn't by a simple reduction from the nonhalting problem. Given
+          <i>(M,w)</i>, construct <i>M'</i> as follows:
+        </span>
+      </p>
+
+      <ol start="1" type="1">
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l3 level1 lfo5;
+            tab-stops: list 36pt;
+          "
+        >
+          <i><span lang="EN-US">M'</span></i
+          ><span lang="EN-US">
+            ignores its own input and simulates <i>M</i> on <i>w</i>.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l3 level1 lfo5;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >If <i>M</i> halts, <i>M'</i> halts on its own input. However, if
+            <i>M</i> never halts on <i>w</i>, then <i>M'</i> will never halt on
+            its own input.
+          </span>
+        </li>
+      </ol>
+
+      <p>
+        <span lang="EN-US"
+          >As a result, <i>M'</i> fails to halt on at least one input (in fact,
+          on all inputs) if <i>M</i> fails to halt on <i>w</i>. If
+          <i>M</i> halts on <i>w</i>, then <i>M'</i> halts on all inputs.
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+
+      <h2>
+        <a name="sol94"></a><span lang="EN-US">Solutions for Section 9.4</span>
+      </h2>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.4.1</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >There is no solution. First, a solution would have to start with pair
+          1, because that is the only pair where one is a prefix of the other.
+          THus, our partial solution starts:
+        </span>
+      </p>
+
+      <pre><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>A: 01</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>B: 011</span></pre>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Now, we need a pair whose <i>A</i>-string begins with 1, and that can
+          only be pair 3. The partial solution becomes
+        </span>
+      </p>
+
+      <pre><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>A: 0110</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>B: 01100</span></pre>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Now, we need a pair whose <i>A</i>-string begins with 0, and either
+          pair 1 or pair 2 might serve. However, trying to extend the solution
+          with pair 1 gives us:
+        </span>
+      </p>
+
+      <pre><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>A: 011001</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>B: 01100011</span></pre>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US">while extending by pair 2 yields: </span>
+      </p>
+
+      <pre><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>A: 0110001</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>B: 0110010</span></pre>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >In both cases, there is a mismatch, and we conclude no solution
+          exists.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.4.3</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >The problem is decidable by the following, fairly simple algorithm.
+          First, if all the <i>A</i>-strings are strictly longer than their
+          corresponding <i>B</i>-strings, then there is surely no solution.
+          Neither is there a solution in the opposite case, where all the
+          <i>B</i>-strings are strictly longer than their corresponding
+          <i>A</i>-strings.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >We claim that in all other cases, there is a solution. If any
+          corresponding pair of strings are the same length, then they are
+          identical, and so just that pair is a solution. The only possibility
+          remains has at least one pair, say <i>i</i>, with the <i>A</i>-string
+          longer than the <i>B</i>-string, say by <i>m</i> symbols, and another
+          pair, say <i>j</i>, where the <i>B</i>-string is longer than the
+          <i>A</i>-string, say by <i>n</i> symbols. Then <i>i^nj^m</i>, i.e.,
+          <i>n</i> uses of pair <i>i</i> followed by <i>m</i> uses of pair
+          <i>j</i> is a solution. In proof, it is easy to check that both the
+          <i>A</i>- and <i>B</i>-strings that result have the same length. Since
+          there is only one symbol, these strings are therefore identical.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+
+      <h2
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <a name="sol95"></a><span lang="EN-US">Solutions for Section 9.5</span>
+      </h2>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >9.5.1</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Given an instance <i>(A,B)</i> of PCP, construct the grammar
+          <i>G_A</i> as in the text. Also, construct a grammar <i>G_{BR}</i>,
+          that is essentially <i>G_B</i>, but with the bodies of all productions
+          reversed, so its language is the reverse of the language of
+          <i>G_B</i>. Assume the start symbols of these grammars are
+          <i>A</i> and <i>B</i>, they contain no variables in common, and that
+          <i>c</i> is a terminal that does not appear in these grammars.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Construct a new grammar <i>G</i> with all the productions of
+          <i>G_A</i> and <i>G_{BR}</i>, plus the production <i>S -&gt; AcB</i>.
+          Then a solution to the PCP instance yields a string <i>y</i> such that
+          <i>y</i> is generated by <i>G_A</i> and <i>y^R</i> is generated by
+          <i>G_{BR}</i>. Thus, <i>G</i> generates the palindrome <i>ycy^R</i>.
+          However, any palindrome generated by <i>G</i> must have the
+          <i>c</i> in the middle and thus implies a solution to the PCP
+          instance, that is, a string <i>y</i> that appears in
+          <i>L(G_A)</i> while <i>y^R</i> appears in <i>L(G_{BR})</i> [and
+          therefore <i>y</i> appears in <i>L(G_B)</i>].
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          ><a href="solutions.htm">Return to Home</a><i><o:p></o:p></i
+        ></span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+    </div>
+  </body>
+</html>

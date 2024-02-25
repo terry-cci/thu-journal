@@ -1,0 +1,1713 @@
+<html
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:w="urn:schemas-microsoft-com:office:word"
+  xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+  xmlns="http://www.w3.org/TR/REC-html40"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="ProgId" content="Word.Document" />
+    <meta name="Generator" content="Microsoft Word 11" />
+    <meta name="Originator" content="Microsoft Word 11" />
+    <link rel="File-List" href="s_chapter7.files/filelist.xml" />
+    <title>
+      Introduction to Automata Theory, Languages, and Computation: Solutions for
+      Chapter 7
+    </title>
+    <o:SmartTagType
+      namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+      name="chmetcnv"
+    />
+    <o:SmartTagType
+      namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+      name="chsdate"
+    />
+    <!--[if gte mso 9
+      ]><xml>
+        <o:DocumentProperties>
+          <o:Author>wang</o:Author>
+          <o:Template>Normal</o:Template>
+          <o:LastAuthor>wangshengyuan</o:LastAuthor>
+          <o:Revision>8</o:Revision>
+          <o:TotalTime>1</o:TotalTime>
+          <o:Created>2002-01-23T01:44:00Z</o:Created>
+          <o:LastSaved>2011-11-19T08:15:00Z</o:LastSaved>
+          <o:Pages>6</o:Pages>
+          <o:Words>2067</o:Words>
+          <o:Characters>11782</o:Characters>
+          <o:Company>wyy</o:Company>
+          <o:Lines>98</o:Lines>
+          <o:Paragraphs>27</o:Paragraphs>
+          <o:CharactersWithSpaces>13822</o:CharactersWithSpaces>
+          <o:Version>11.9999</o:Version>
+        </o:DocumentProperties>
+      </xml><!
+    [endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <w:WordDocument>
+          <w:GrammarState>Clean</w:GrammarState>
+          <w:DrawingGridVerticalSpacing>7.8 ��</w:DrawingGridVerticalSpacing>
+          <w:ValidateAgainstSchemas />
+          <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+          <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+          <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+          <w:Compatibility>
+            <w:UseFELayout />
+          </w:Compatibility>
+          <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+        </w:WordDocument>
+      </xml><!
+    [endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+        </w:LatentStyles> </xml
+    ><![endif]-->
+    <!--[if !mso
+      ]><object
+        classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D"
+        id="ieooui"
+      ></object>
+      <style>
+        st1\:* {
+          behavior: url(#ieooui);
+        }
+      </style>
+    <![endif]-->
+    <style>
+      <!--
+       /* Font Definitions */
+       @font-face
+      	{font-family: "Cambria Math";
+      	panose-1:2 1 6 0 3 1 1 1 1 1;
+      	mso-font-alt:SimSun;
+      	mso-font-charset:134;
+      	mso-generic-font-family:auto;
+      	mso-font-pitch:variable;
+      	mso-font-signature:3 135135232 16 0 262145 0;}
+      @font-face
+      	{font-family:"Cambria Math";
+      	panose-1:2 1 6 0 3 1 1 1 1 1;
+      	mso-font-charset:134;
+      	mso-generic-font-family:auto;
+      	mso-font-pitch:variable;
+      	mso-font-signature:3 135135232 16 0 262145 0;}
+       /* Style Definitions */
+       p.MsoNormal, li.MsoNormal, div.MsoNormal
+      	{mso-style-parent:"";
+      	margin:0cm;
+      	margin-bottom:.0001pt;
+      	mso-pagination:widow-orphan;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Geneva";}
+      a:link, span.MsoHyperlink
+      	{color:blue;
+      	text-decoration:underline;
+      	text-underline:single;}
+      a:visited, span.MsoHyperlinkFollowed
+      	{color:blue;
+      	text-decoration:underline;
+      	text-underline:single;}
+      p
+      	{mso-margin-top-alt:auto;
+      	margin-right:0cm;
+      	mso-margin-bottom-alt:auto;
+      	margin-left:0cm;
+      	mso-pagination:widow-orphan;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Geneva";}
+      pre
+      	{margin:0cm;
+      	margin-bottom:.0001pt;
+      	mso-pagination:widow-orphan;
+      	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Courier New";}
+       /* Page Definitions */
+       @page
+      	{mso-page-border-surround-header:no;
+      	mso-page-border-surround-footer:no;}
+      @page Section1
+      	{size:595.3pt 841.9pt;
+      	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+      	mso-header-margin:42.55pt;
+      	mso-footer-margin:49.6pt;
+      	mso-paper-source:0;}
+      div.Section1
+      	{page:Section1;}
+       /* List Definitions */
+       @list l0
+      	{mso-list-id:1312832720;
+      	mso-list-type:hybrid;
+      	mso-list-template-ids:-2046513686 -1769200408 1522677618 -2097230122 -1808365818 1680867930 -2102388524 -502879832 1175464222 -948911158;}
+      @list l0:level1
+      	{mso-level-tab-stop:36.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level2
+      	{mso-level-tab-stop:72.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level3
+      	{mso-level-tab-stop:108.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level4
+      	{mso-level-tab-stop:144.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level5
+      	{mso-level-tab-stop:180.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level6
+      	{mso-level-tab-stop:216.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level7
+      	{mso-level-tab-stop:252.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level8
+      	{mso-level-tab-stop:288.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level9
+      	{mso-level-tab-stop:324.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      ol
+      	{margin-bottom:0cm;}
+      ul
+      	{margin-bottom:0cm;}
+      -->
+    </style>
+    <!--[if gte mso 10]>
+      <style>
+        /* Style Definitions */
+        table.MsoNormalTable {
+          mso-style-name: ��ͨCambria Math;
+          mso-tstyle-rowband-size: 0;
+          mso-tstyle-colband-size: 0;
+          mso-style-noshow: yes;
+          mso-style-parent: "";
+          mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;
+          mso-para-margin: 0cm;
+          mso-para-margin-bottom: 0.0001pt;
+          mso-pagination: widow-orphan;
+          font-size: 10pt;
+          font-family: "Geneva";
+          mso-fareast-font-family: "Geneva";
+          mso-ansi-language: #0400;
+          mso-fareast-language: #0400;
+          mso-bidi-language: #0400;
+        }
+      </style>
+    <![endif]-->
+    <!--[if gte mso 9
+      ]><xml> <o:shapedefaults v:ext="edit" spidmax="1026" /> </xml
+    ><![endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <o:shapelayout v:ext="edit">
+          <o:idmap v:ext="edit" data="1" /> </o:shapelayout></xml
+    ><![endif]-->
+  </head>
+
+  <body
+    bgcolor="black"
+    lang="ZH-CN"
+    link="blue"
+    vlink="blue"
+    text="white"
+    style="tab-interval: 21pt"
+  >
+    <div class="Section1">
+      <div align="center">
+        <table
+          class="MsoNormalTable"
+          border="0"
+          cellpadding="0"
+          style="mso-cellspacing: 1.5pt; mso-padding-alt: 0cm 0cm 0cm 0cm"
+        >
+          <tr
+            style="
+              mso-yfti-irow: 0;
+              mso-yfti-firstrow: yes;
+              mso-yfti-lastrow: yes;
+            "
+          >
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal">
+                <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <span lang="EN-US" style="font-size: 24pt"
+                  >Introduction to Automata Theory, Languages, and
+                  Computation</span
+                ><span lang="EN-US"> </span>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <h2 align="center" style="text-align: center">
+        <a name="top"></a><span lang="EN-US">Solutions for Chapter 7</span>
+      </h2>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >Revised
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="1"
+            Month="11"
+            Year="2003"
+            w:st="on"
+            >3/11/01</st1:chsdate
+          >.
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"><span style="mso-spacerun: yes">&nbsp;</span></span>
+      </p>
+
+      <h2>
+        <a name="sol71"></a><span lang="EN-US">Solutions for Section 7.1</span>
+      </h2>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.1.1</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <i><span lang="EN-US">A</span></i
+        ><span lang="EN-US">
+          and <i>C</i> are clearly generating, since they have productions with
+          terminal bodies. Then we can discover <i>S</i> is generating because
+          of the production <i>S-&gt;CA</i>, whose body consists of only symbols
+          that are generating. However, <i>B</i> is not generating. Eliminating
+          <i>B</i>, leaves the grammar
+        </span>
+      </p>
+
+      <pre><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>S -&gt; CA</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>A -&gt; a</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>C -&gt; b</span></pre>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Since <i>S, A</i>, and <i>C</i> are each reachable from <i>S</i>, all
+          the remaining symbols are useful, and the above grammar is the answer
+          to the question.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.1.2</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Revised
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="28"
+            Month="10"
+            Year="2001"
+            w:st="on"
+            >10/28/01</st1:chsdate
+          >.
+        </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US">a) </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          margin-left: 36pt;
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >It is easy to check that each of <i>S, A</i>, and <i>B</i> has a
+          production with a terminal body (remember epsilon is, strictly
+          speaking, a string of only terminals), and so each is generating.
+          Moreover, the production <i>S -&gt; ASB</i> shows each variable is
+          reachable from <i>S</i>, so there are no useless symbols.
+        </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US">b) </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          margin-left: 36pt;
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Only <i>S</i> is nullable, so we must choose, at each point where
+          <i>S</i> occurs in a body, to eliminate it or not. Since there is no
+          body that consists only of <i>S</i>'s, we do not have to invoke the
+          rule about not eliminating an entire body. The resulting grammar:
+        </span>
+      </p>
+
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>S -&gt; ASB | AB</span></pre>
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>A -&gt; aAS | aA | a</span></pre>
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>B -&gt; SbS | bS | Sb | b | A | bb</span></pre>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US">c) </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          margin-left: 36pt;
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >The only unit production is <i>B -&gt; A</i>. Thus, it suffices to
+          replace this body <i>A</i> by the bodies of all the
+          <i>A</i>-productions. The result:
+        </span>
+      </p>
+
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>S -&gt; ASB | AB</span></pre>
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>A -&gt; aAS | aA | a</span></pre>
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>B -&gt; SbS | bS | Sb | b | aAS | aA | a | bb</span></pre>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US">d) </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          margin-left: 36pt;
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Introduce variables and productions <i>C -&gt; a</i> and
+          <i>D -&gt; b</i>, and use the new variables in all bodies that are not
+          a single terminal:
+        </span>
+      </p>
+
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=PT-BR style='mso-ansi-language:PT-BR'>S -&gt; ASB | AB<o:p></o:p></span></pre>
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>A -&gt; CAS | CA | a<o:p></o:p></span></pre>
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>B -&gt; SDS | DS | SD | b | CAS | CA | a | DD<o:p></o:p></span></pre>
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>C -&gt; a</span></pre>
+      <pre style="margin-left: 36pt"><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>D -&gt; b</span></pre>
+
+      <p
+        style="
+          margin-left: 36pt;
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Finally, there are bodies of length 3; one, <i>CAS</i>, appears
+          twice. Introduce new variables <i>E, F</i>, and <i>G</i> to split
+          these bodies, yielding the CNF grammar:
+        </span>
+      </p>
+
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=PT-BR style='mso-ansi-language:PT-BR'>S -&gt; AE | AB<o:p></o:p></span></pre>
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>A -&gt; CF | CA | a<o:p></o:p></span></pre>
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>B -&gt; SG | DS | SD | b | CF | CA | a | DD<o:p></o:p></span></pre>
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>C -&gt; a<o:p></o:p></span></pre>
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>D -&gt; b<o:p></o:p></span></pre>
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>E -&gt; SB<o:p></o:p></span></pre>
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>F -&gt; AS<o:p></o:p></span></pre>
+      <pre
+        style="margin-left: 36pt"
+      ><span lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>G -&gt; DS<o:p></o:p></span></pre>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.1.10</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >It's not possible. The reason is that an easy induction on the number
+          of steps in a derivation shows that every sentential form has odd
+          length. Thus, it is not possible to find such a grammar for a language
+          as simple as {00}.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >To see why, suppose we begin with start symbol <i>S</i> and try to
+          pick a first production. If we pick a production with a single
+          terminal as body, we derive a string of length 1 and are done. If we
+          pick a body with three variables, then, since there is no way for a
+          variable to derive epsilon, we are forced to derive a string of length
+          3 or more.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.1.11</st1:chsdate
+          >(b)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >The statement of the entire construction may be a bit tricky, since
+          you need to use the construction of part (c) in (b), although we are
+          not publishing the solution to (c). The construction for (b) is by
+          induction on <i>i</i>, but it needs to be of the stronger statement
+          that if an <i>A_i</i>-production has a body beginning with <i>A_j</i>,
+          then <i>j &gt; i</i> (i.e., we use part (c) to eliminate the
+          possibility that <i>i=j</i>).
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Basis: For <i>i</i> = 1 we simply apply the construction of (c) for
+          <i>i = 1</i>.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Induction: If there is any production of the form
+          <i>A_i -&gt; A_1...</i>, use the construction of (a) to replace
+          <i>A_1</i>. That gives us a situation where all <i>A_i</i> production
+          bodies begin with at least <i>A_2</i> or a terminal. Similarly,
+          replace initial <i>A_2</i>'s using (a), to make <i>A_3</i> the lowest
+          possible variable beginning an <i>A_i</i>-production. In this manner,
+          we eventually guarantee that the body of each <i>A_i</i>-production
+          either begins with a terminal or with <i>A_j</i>, for some
+          <i>j &gt;= i</i>. A use of the construction from (c) eliminates the
+          possibility that <i>i = j</i>.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.1.11</st1:chsdate
+          >(d)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >As per the hint, we do a backwards induction on <i>i</i>, that the
+          bodies of <i>A_i</i> productions can be made to begin with terminals.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Basis: For <i>i = k</i>, there is nothing to do, since there are no
+          variables with index higher than <i>k</i> to begin the body.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Induction: Assume the statement for indexes greater than <i>i</i>. If
+          an <i>A_i</i>-production begins with a variable, it must be
+          <i>A_j</i> for some <i>j &gt; i</i>. By the induction hypothesis, the
+          <i>A_j</i>-productions all have bodies beginning with terminals now.
+          Thus, we may use the construction (a) to replace the initial
+          <i>A_j</i>, yielding only <i>A_i</i>-productions whose bodies begin
+          with terminals.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >After fixing all the <i>A_i</i>-productions for all <i>i</i>, it is
+          time to work on the <i>B_i</i>-productions. Since these have bodies
+          that begin with either terminals or <i>A_j</i> for some <i>j</i>, and
+          the latter variables have only bodies that begin with terminals,
+          application of construction (a) fixes the <i>B_j</i>'s.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+
+      <h2
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <a name="sol72"></a><span lang="EN-US">Solutions for Section 7.2</span>
+      </h2>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.2.1</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Let <i>n</i> be the pumping-lemma constant and consider string
+          <i>z = a^nb^{n+1}c^{n+2}</i>. We may write <i>z = uvwxy</i>, where
+          <i>v</i> and <i>x</i>, may be ``pumped,'' and <i>|vwx| &lt;= n</i>. If
+          <i>vwx</i> does not have <i>c</i>'s, then <i>uv^3wx^3y</i> has at
+          least
+          <i
+            >n+<st1:chmetcnv
+              TCSC="0"
+              NumberType="1"
+              Negative="False"
+              HasSpace="True"
+              SourceValue="2"
+              UnitName="a"
+              w:st="on"
+              >2<span style="font-style: normal"> </span>a</st1:chmetcnv
+            ></i
+          >'s or <i>b</i>'s, and thus could not be in the language.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >If <i>vwx</i> has a <i>c</i>, then it could not have an <i>a</i>,
+          because its length is limited to <i>n</i>. Thus, <i>uwy</i> has
+          <i>n</i> <i>a</i>'s, but no more than <i>2n+2</i> <i>b</i>'s and
+          <i>c</i>'s in total. Thus, it is not possible that <i>uwy</i> has more
+          <i>b</i>'s than <i>a</i>'s and also has more <i>c</i>'s than
+          <i>b</i>'s. We conclude that <i>uwy</i> is not in the language, and
+          now have a contradiction no matter how <i>z</i> is broken into
+          <i>uvwxy</i>.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.2.1</st1:chsdate
+          >(d)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Let <i>n</i> be the pumping-lemma constant and consider
+          <i>z = 0^n1^n^2</i>. We break <i>Z = uvwxy</i> according to the
+          pumping lemma. If <i>vwx</i> consists only of 0's, then <i>uwy</i> has
+          <i>n^2</i> 1's and fewer than <i>n</i> 0's; it is not in the language.
+          If <i>vwx</i> has only 1's, then we derive a contradiction similarly.
+          If either <i>v</i> or <i>x</i> has both 0's and 1's, then
+          <i>uv^2wx^2y</i> is not in <i>0*1*</i>, and thus could not be in the
+          language.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Finally, consider the case where <i>v</i> consists of 0's only, say
+          <i>k</i> 0's, and <i>x</i> consists of <i>m</i> 1's only, where
+          <i>k</i> and <i>m</i> are both positive. Then for all <i>i</i>,
+          <i>uv^{i+1}wx^{i+1}y</i> consists of
+          <i>(n+ik)^2 = n^2 + 2ink + i^2k^2</i> 0's and <i>n^2 + im</i> 1's. If
+          the number of 1's is always to be the square of the number of 0's, we
+          must have, for some positive <i>k</i> and <i>m</i>:
+          <i>2ink + i^2k^2 = im</i>. But the left side grows quadratically in
+          <i>i</i>, while the right side grows linearly, and so this equality
+          for all <i>i</i> is impossible. We conclude that for at least some
+          <i>i</i>, <i>uv^{i+1}wx^{i+1}y</i> is not in the language and have
+          thus derived a contradiction in all cases.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.2.2</st1:chsdate
+          >(b)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >It could be that, when the adversary breaks <i>z = uvwxy</i>,
+          <i>v = 0^k</i> and <i>x = 1^k</i>. Then, for all <i>i</i>,
+          <i>uv^iwx^iy</i> is in the language.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.2.2</st1:chsdate
+          >(c)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >The adversary could choose <i>z = uvwxy</i> so that <i>v</i> and
+          <i>x</i> are single symbols, on either side of the center. That is,
+          <i>|u| = |y|</i>, and <i>w</i> is either epsilon (if <i>z</i> is of
+          even length) or the single, middle symbol (if <i>z</i> is of odd
+          length). Since <i>z</i> is a palindrome, <i>v</i> and <i>x</i> will be
+          the same symbol. Then <i>uv^iwx^iy</i> is always a palindrome.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.2.4</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >The hint turns out to be a bad one. The easiest way to prove this
+          result starts with a string <i>z = 0^n1^n0^n1^n</i> where the middle
+          two blocks are distinguished. Note that <i>vwx</i> cannot include 1's
+          from the second block and also 1's from the fourth block, because then
+          <i>vwx</i> would have all <i>n</i> distinguished 0's and thus at least
+          <i>n+1</i> distinguished symbols. Likewise, it cannot have 0's from
+          both blocks of 0's. Thus, when we pump <i>v</i> and <i>x</i>, we must
+          get an imbalance between the blocks of 1's or the blocks of 0's,
+          yielding a string not in the language.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+
+      <h2
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <a name="sol73"></a><span lang="EN-US">Solutions for Section 7.3</span>
+      </h2>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.3.1</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >For each variable <i>A</i> of the original grammar <i>G</i>, let
+          <i>A'</i> be a new variable that generates <i>init</i> of what
+          <i>A</i> generates. Thus, if <i>S</i> is the start symbol of <i>G</i>,
+          we make <i>S'</i> the new start symbol.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >If <i>A -&gt; BC</i> is a production of <i>G</i>, then in the new
+          grammar we have <i>A -&gt; BC</i>, <i>A' -&gt; BC'</i>, and
+          <i>A' -&gt; B'</i>. If <i>A -&gt; a</i> is a production of <i>G</i>,
+          then the new grammar has <i>A -&gt; a</i>, <i>A' -&gt; a</i>, and
+          <i>A' -&gt; epsilon</i>.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.3.1</st1:chsdate
+          >(b)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >The construction is similar to that of part (a), but now
+          <i>A'</i> must be designed to generate string <i>w</i> if and only if
+          <i>A</i> generates <i>wa</i>. That is, <i>A'</i>'s language is the
+          result of applying <i>/a</i> to <i>A</i>'s language.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >If <i>G</i> has production <i>A -&gt; BC</i>, then the new grammar
+          has <i>A -&gt; BC</i> and <i>A' -&gt; BC'</i>. If <i>G</i> has
+          <i>A -&gt; b</i> for some <i>b != a</i>, then the new grammar has
+          <i>A -&gt; b</i>, but we do not add any production for <i>A'</i>. If
+          <i>G</i> has <i>A -&gt; a</i>, then the new grammar has
+          <i>A -&gt; a</i> and <i>A' -&gt; epsilon</i>.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.3.3</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Consider the language <i>L = {a^ib^jc^k | i &lt;= k</i> or
+          <i>j &lt;= k}</i>. <i>L</i> is easily seen to be a CFL; you can design
+          a PDA that guesses whether to compare the <i>a</i>'s or <i>b</i>'s
+          with the <i>c</i>'s. However,
+          <i>min(L) = {a^ib^jc^k | k = min(i,j)}</i>. It is also easy to show,
+          using the pumping lemma, that this language is not a CFL. Let
+          <i>n</i> be the pumping-lemma constant, and consider
+          <i>Z = a^nb^nc^n</i>.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.3.4</st1:chsdate
+          >(b)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >If we start with a string of the form <i>0^n1^n</i> and intersperse
+          any number of 0's, we can obtain any string of 0's and 1's that begins
+          with at least as many 0's as there are 1's in the entire string.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.3.4</st1:chsdate
+          >(c)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Given DFA's for <i>L_1</i> and <i>L_2</i>, we can construct an NFA
+          for their shuffle by using the product of the two sets of states, that
+          is, all states <i>[p,q]</i> such that <i>p</i> is a state of the
+          automaton for <i>L_1</i>, and <i>q</i> is a state of the automaton for
+          <i>L_2</i>. The start state of the automaton for the shuffle consists
+          of the start states of the two automata, and its accepting states
+          consist of pairs of accepting states, one from each DFA.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >The NFA for the shuffle guesses, at each input, whether it is from
+          <i>L_1</i> or <i>L_2</i>. More formally,
+          <i>delta([p,q],a) = {[delta_1(p,a),q], [p,delta_2(q,a)]}</i>, where
+          <i>delta_i</i> is the transition function for the DFA for
+          <i>L_i</i> (<i>i</i> = 1 or 2). It is then an easy induction on the
+          length of <i>w</i> that <i>delta-hat([p_0,q_0],w)</i> contains
+          <i>[p,q]</i> if and only if <i>w</i> is the shuffle of some
+          <i>x</i> and <i>y</i>, where <i>delta_1-hat(p_0,x) = p</i> and
+          <i>delta_2-hat(q_0,y) = q</i>.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.3.5</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US">a) </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          margin-left: 36pt;
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Consider the language of regular expression
+          <b
+            >(<st1:chmetcnv
+              TCSC="0"
+              NumberType="1"
+              Negative="False"
+              HasSpace="False"
+              SourceValue="0"
+              UnitName="l"
+              w:st="on"
+              >0l</st1:chmetcnv
+            >)*</b
+          >. Its permutations consist of all strings with an equal number of 0's
+          and 1's, which is easily shown not regular. In proof, use the pumping
+          lemma for regular languages, let <i>n</i> be the pumping-lemma
+          constant, and consider string <i>0^n1^n</i>.
+        </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US">b) </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          margin-left: 36pt;
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >The language of <b>(012)*</b> serves. Its permutations are all
+          strings with an equal number of 0's 1's, and 2's. We can prove this
+          language not to be a CFL by using the pumping lemma on
+          <i>0^n1^n2^n</i>, where <i>n</i> is the pumping-lemma constant.
+        </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US">c) </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          margin-left: 36pt;
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Assume the alphabet of regular language <i>L</i> is {0,1}. We can
+          design a PDA <i>P</i> to recognize <i>perm(L)</i>, as follows.
+          <i>P</i> simulates the DFA <i>A</i> for <i>L</i> on an input string
+          that it guesses. However, <i>P</i> must also check that its own input
+          is a permutation of the guessed string. Thus, each time
+          <i>P</i> guesses an input for <i>A</i>, it also reads one of its own
+          symbols. <i>P</i> uses its stack to remember whether it has seen more
+          0's than it has guessed, or seen more 1's than it has guessed. It does
+          so by keeping a stack string with a bottom-of-stack marker and either
+          as many more 0's as it has seen than guessed, or as many more 1's as
+          it has seen than guessed.
+        </span>
+      </p>
+
+      <p
+        style="
+          margin-left: 36pt;
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >For instance, if <i>P</i> guesses 0 as an input for <i>A</i> but sees
+          a 1 on its own input, then <i>P</i>:
+        </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          mso-margin-top-alt: auto;
+          mso-margin-bottom-alt: auto;
+          margin-left: 72pt;
+          text-indent: -18pt;
+          mso-list: l0 level1 lfo2;
+          tab-stops: list 36pt;
+        "
+      >
+        <![if !supportLists]><span
+          lang="EN-US"
+          style="mso-bidi-font-family: Cambria Math"
+          ><span style="mso-list: Ignore"
+            >1.<span style="font: 7pt 'Geneva'">&nbsp;&nbsp;&nbsp; </span></span
+          ></span
+        ><![endif]><span lang="EN-US"
+          >If 0 is the top stack symbol, then push another 0.
+        </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          mso-margin-top-alt: auto;
+          mso-margin-bottom-alt: auto;
+          margin-left: 72pt;
+          text-indent: -18pt;
+          mso-list: l0 level1 lfo2;
+          tab-stops: list 36pt;
+        "
+      >
+        <![if !supportLists]><span
+          lang="EN-US"
+          style="mso-bidi-font-family: Cambria Math"
+          ><span style="mso-list: Ignore"
+            >2.<span style="font: 7pt 'Geneva'">&nbsp;&nbsp;&nbsp; </span></span
+          ></span
+        ><![endif]><span lang="EN-US"
+          >If 1 is the top stack symbol, then pop the stack.
+        </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          mso-margin-top-alt: auto;
+          mso-margin-bottom-alt: auto;
+          margin-left: 72pt;
+          text-indent: -18pt;
+          mso-list: l0 level1 lfo2;
+          tab-stops: list 36pt;
+        "
+      >
+        <![if !supportLists]><span
+          lang="EN-US"
+          style="mso-bidi-font-family: Cambria Math"
+          ><span style="mso-list: Ignore"
+            >3.<span style="font: 7pt 'Geneva'">&nbsp;&nbsp;&nbsp; </span></span
+          ></span
+        ><![endif]><span lang="EN-US"
+          >If <i>Z_0</i>, the bottom-of-stack marker is on top, push a 0.
+        </span>
+      </p>
+
+      <p
+        class="MsoNormal"
+        style="
+          margin-left: 36pt;
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >In addition, if <i>P</i> exposes the bottom-of-stack marker, then it
+          has guessed, as input to <i>A</i>, a permutation of the input
+          <i>P</i> has seen. Thus, if <i>A</i> is in an accepting state,
+          <i>P</i> has a choice of move to pop its stack on epsilon input, thus
+          accepting by empty stack.
+        </span>
+      </p>
+
+      <h2
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <a name="sol74"></a><span lang="EN-US">Solutions for Section 7.4</span>
+      </h2>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.4.1</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >If there is any string at all that can be ``pumped,'' then the
+          language is infinite. Thus, let <i>n</i> be the pumping-lemma
+          constant. If there are no strings as long as <i>n</i>, then surely the
+          language is finite. However, how do we tell if there is some string of
+          length <i>n</i> or more? If we had to consider all such strings, we'd
+          never get done, and that would not give us a decision algorithm.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >The trick is to realize that if there is any string of length
+          <i>n</i> or more, then there will be one whose length is in the range
+          <i>n</i> through <i>2n-1</i>, inclusive. For suppose not. Let
+          <i>z</i> be a string that is as short as possible, subject to the
+          constraint that <i>|z| &gt;= n</i>. If <i>|z| &lt; 2n</i>, we are
+          done; we have found a string in the desired length range. If
+          <i>|z| &gt;= 2n</i>, use the pumping lemma to write <i>z = uvwxy</i>.
+          We know <i>uwy</i> is also in the language, but because
+          <i>|vwx| &lt;= n</i>, we know <i>|z| &gt; |uwy| &gt;= n</i>. That
+          contradicts our assumption that <i>z</i> was as short as possible
+          among strings of length <i>n</i> or more in the language.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >We conclude that <i>|z| &lt; 2n</i>. Thus, our algorithm to test
+          finiteness is to test membership of all strings of length between
+          <i>n</i> and <i>2n-1</i>. If we find one, the language is infinite,
+          and if not, then the language is finite.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.4.3</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US">Here is the table: </span>
+      </p>
+
+      <pre><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>{S,A,C}</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>{B}<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>{B}</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>{B}<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>{S,C}<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>{B}</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>{S,C}<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>{S,A}<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>{S,C}<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>{S,A}</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span><span
+lang=PT-BR style='mso-ansi-language:PT-BR'>{A,C}<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>{B}<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>{A,C}<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>{B}<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>{A,C}<o:p></o:p></span></pre>
+      <pre><span
+lang=PT-BR style='mso-ansi-language:PT-BR'>------------------------------------------<o:p></o:p></span></pre>
+      <pre><span
+lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>a<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>b<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>a<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>b<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>a<o:p></o:p></span></pre>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Since <i>S</i> appears in the upper-left corner, <i>ababa</i> is in
+          the language.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >7.4.4</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >The proof is an induction on <i>n</i> that if <i>A =&gt;* w</i>, for
+          any variable <i>A</i>, and <i>|w| = n</i>, then all parse trees with
+          <i>A</i> at the root and yield <i>w</i> have <i>2n-1</i> interior
+          nodes.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Basis: <i>n = 1</i>. The parse tree must have a root with variable
+          <i>A</i> and a leaf with one terminal. This tree has
+          <i>2n-1 = 1</i> interior node.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Induction: Assume the statement for strings of length less than
+          <i>n</i>, and let <i>n &gt; 1</i>. Then the parse tree begins with
+          <i>A</i> at the root and two children labeled by variables
+          <i>B</i> and <i>C</i>. Then we can write <i>w = xy</i>, where
+          <i>B =&gt;* x</i> and <i>C =&gt;* y</i>. Also, <i>x</i> and
+          <i>y</i> are each shorter than length <i>n</i>, so the inductive
+          hypothesis applies to them, and we know that the parse trees for these
+          derivations have, respectively, <i>2|x|-1</i> and
+          <i>2|y|-1</i> interior nodes.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Thus, the parse tree for <i>A =&gt;* w</i> has one (for the root)
+          plus the sum of these two quantities number of interior nodes, or
+          <i>2(|x|+|y|-1)</i> interior nodes. Since <i>|x|+|y| = |w| = n</i>, we
+          are done; the parse tree for <i>A =&gt;* w</i> has
+          <i>2n-1</i> interior nodes.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          ><a href="solutions.htm">Return to Home</a><i><o:p></o:p></i
+        ></span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+    </div>
+  </body>
+</html>

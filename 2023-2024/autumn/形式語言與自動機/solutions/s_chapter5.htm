@@ -1,0 +1,1055 @@
+<html
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:w="urn:schemas-microsoft-com:office:word"
+  xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+  xmlns="http://www.w3.org/TR/REC-html40"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="ProgId" content="Word.Document" />
+    <meta name="Generator" content="Microsoft Word 11" />
+    <meta name="Originator" content="Microsoft Word 11" />
+    <link rel="File-List" href="s_chapter5.files/filelist.xml" />
+    <title>
+      Introduction to Automata Theory, Languages, and Computation: Solutions for
+      Chapter 5
+    </title>
+    <o:SmartTagType
+      namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+      name="chmetcnv"
+    />
+    <o:SmartTagType
+      namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+      name="chsdate"
+    />
+    <!--[if gte mso 9
+      ]><xml>
+        <o:DocumentProperties>
+          <o:Author>wang</o:Author>
+          <o:Template>Normal</o:Template>
+          <o:LastAuthor>wangshengyuan</o:LastAuthor>
+          <o:Revision>7</o:Revision>
+          <o:TotalTime>3</o:TotalTime>
+          <o:Created>2002-01-23T01:43:00Z</o:Created>
+          <o:LastSaved>2011-11-19T08:14:00Z</o:LastSaved>
+          <o:Pages>3</o:Pages>
+          <o:Words>549</o:Words>
+          <o:Characters>3135</o:Characters>
+          <o:Company>wyy</o:Company>
+          <o:Lines>26</o:Lines>
+          <o:Paragraphs>7</o:Paragraphs>
+          <o:CharactersWithSpaces>3677</o:CharactersWithSpaces>
+          <o:Version>11.9999</o:Version>
+        </o:DocumentProperties>
+      </xml><!
+    [endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <w:WordDocument>
+          <w:SpellingState>Clean</w:SpellingState>
+          <w:GrammarState>Clean</w:GrammarState>
+          <w:DrawingGridVerticalSpacing>7.8 ��</w:DrawingGridVerticalSpacing>
+          <w:ValidateAgainstSchemas />
+          <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+          <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+          <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+          <w:Compatibility>
+            <w:UseFELayout />
+          </w:Compatibility>
+          <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+        </w:WordDocument>
+      </xml><!
+    [endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+        </w:LatentStyles> </xml
+    ><![endif]-->
+    <!--[if !mso
+      ]><object
+        classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D"
+        id="ieooui"
+      ></object>
+      <style>
+        st1\:* {
+          behavior: url(#ieooui);
+        }
+      </style>
+    <![endif]-->
+    <style>
+      <!--
+       /* Font Definitions */
+       @font-face
+      	{font-family: "Cambria Math";
+      	panose-1:2 1 6 0 3 1 1 1 1 1;
+      	mso-font-alt:SimSun;
+      	mso-font-charset:134;
+      	mso-generic-font-family:auto;
+      	mso-font-pitch:variable;
+      	mso-font-signature:3 135135232 16 0 262145 0;}
+      @font-face
+      	{font-family:"Cambria Math";
+      	panose-1:2 1 6 0 3 1 1 1 1 1;
+      	mso-font-charset:134;
+      	mso-generic-font-family:auto;
+      	mso-font-pitch:variable;
+      	mso-font-signature:3 135135232 16 0 262145 0;}
+       /* Style Definitions */
+       p.MsoNormal, li.MsoNormal, div.MsoNormal
+      	{mso-style-parent:"";
+      	margin:0cm;
+      	margin-bottom:.0001pt;
+      	mso-pagination:widow-orphan;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Geneva";}
+      a:link, span.MsoHyperlink
+      	{color:blue;
+      	text-decoration:underline;
+      	text-underline:single;}
+      a:visited, span.MsoHyperlinkFollowed
+      	{color:blue;
+      	text-decoration:underline;
+      	text-underline:single;}
+      p
+      	{mso-margin-top-alt:auto;
+      	margin-right:0cm;
+      	mso-margin-bottom-alt:auto;
+      	margin-left:0cm;
+      	mso-pagination:widow-orphan;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Geneva";}
+      pre
+      	{margin:0cm;
+      	margin-bottom:.0001pt;
+      	mso-pagination:widow-orphan;
+      	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Courier New";}
+      span.SpellE
+      	{mso-style-name:"";
+      	mso-spl-e:yes;}
+      span.GramE
+      	{mso-style-name:"";
+      	mso-gram-e:yes;}
+       /* Page Definitions */
+       @page
+      	{mso-page-border-surround-header:no;
+      	mso-page-border-surround-footer:no;}
+      @page Section1
+      	{size:595.3pt 841.9pt;
+      	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+      	mso-header-margin:42.55pt;
+      	mso-footer-margin:49.6pt;
+      	mso-paper-source:0;}
+      div.Section1
+      	{page:Section1;}
+       /* List Definitions */
+       @list l0
+      	{mso-list-id:128133506;
+      	mso-list-template-ids:991075094;}
+      @list l1
+      	{mso-list-id:182517813;
+      	mso-list-template-ids:1277451544;}
+      @list l1:level1
+      	{mso-level-number-format:bullet;
+      	mso-level-text:\F0B7;
+      	mso-level-tab-stop:36.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;
+      	mso-ansi-font-size:10.0pt;
+      	font-family:Symbol;}
+      @list l2
+      	{mso-list-id:255797282;
+      	mso-list-type:hybrid;
+      	mso-list-template-ids:-1649502536 2022058578 -125382244 -978057642 1991295652 -1469574396 -833213066 1568309792 -1712313606 1136011520;}
+      @list l2:level1
+      	{mso-level-tab-stop:36.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level2
+      	{mso-level-tab-stop:72.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level3
+      	{mso-level-tab-stop:108.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level4
+      	{mso-level-tab-stop:144.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level5
+      	{mso-level-tab-stop:180.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level6
+      	{mso-level-tab-stop:216.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level7
+      	{mso-level-tab-stop:252.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level8
+      	{mso-level-tab-stop:288.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level9
+      	{mso-level-tab-stop:324.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3
+      	{mso-list-id:936717823;
+      	mso-list-type:hybrid;
+      	mso-list-template-ids:-1485530528 -392022398 1911979968 -1998406026 823404620 1115955630 2108949256 -1942204828 -687669276 -1692356084;}
+      @list l3:level1
+      	{mso-level-number-format:bullet;
+      	mso-level-text:\F0B7;
+      	mso-level-tab-stop:36.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;
+      	mso-ansi-font-size:10.0pt;
+      	font-family:Symbol;}
+      @list l3:level2
+      	{mso-level-tab-stop:72.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level3
+      	{mso-level-tab-stop:108.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level4
+      	{mso-level-tab-stop:144.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level5
+      	{mso-level-tab-stop:180.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level6
+      	{mso-level-tab-stop:216.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level7
+      	{mso-level-tab-stop:252.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level8
+      	{mso-level-tab-stop:288.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level9
+      	{mso-level-tab-stop:324.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      ol
+      	{margin-bottom:0cm;}
+      ul
+      	{margin-bottom:0cm;}
+      -->
+    </style>
+    <!--[if gte mso 10]>
+      <style>
+        /* Style Definitions */
+        table.MsoNormalTable {
+          mso-style-name: ��ͨCambria Math;
+          mso-tstyle-rowband-size: 0;
+          mso-tstyle-colband-size: 0;
+          mso-style-noshow: yes;
+          mso-style-parent: "";
+          mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;
+          mso-para-margin: 0cm;
+          mso-para-margin-bottom: 0.0001pt;
+          mso-pagination: widow-orphan;
+          font-size: 10pt;
+          font-family: "Geneva";
+          mso-fareast-font-family: "Geneva";
+          mso-ansi-language: #0400;
+          mso-fareast-language: #0400;
+          mso-bidi-language: #0400;
+        }
+      </style>
+    <![endif]-->
+    <!--[if gte mso 9
+      ]><xml> <o:shapedefaults v:ext="edit" spidmax="1026" /> </xml
+    ><![endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <o:shapelayout v:ext="edit">
+          <o:idmap v:ext="edit" data="1" /> </o:shapelayout></xml
+    ><![endif]-->
+  </head>
+
+  <body
+    bgcolor="black"
+    lang="ZH-CN"
+    link="blue"
+    vlink="blue"
+    text="white"
+    style="tab-interval: 21pt"
+  >
+    <div class="Section1">
+      <div align="center">
+        <table
+          class="MsoNormalTable"
+          border="0"
+          cellpadding="0"
+          style="mso-cellspacing: 1.5pt; mso-padding-alt: 0cm 0cm 0cm 0cm"
+        >
+          <tr
+            style="
+              mso-yfti-irow: 0;
+              mso-yfti-firstrow: yes;
+              mso-yfti-lastrow: yes;
+            "
+          >
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal">
+                <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <span lang="EN-US" style="font-size: 24pt"
+                  >Introduction to Automata Theory, Languages, and
+                  Computation</span
+                ><span lang="EN-US"> </span>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <h2 align="center" style="text-align: center">
+        <a name="top"></a><span lang="EN-US">Solutions for Chapter 5</span>
+      </h2>
+
+      <p>
+        <span lang="EN-US"><span style="mso-spacerun: yes">&nbsp;</span></span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >Revised
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="1"
+            Month="11"
+            Year="2011"
+            w:st="on"
+            >11/11/01</st1:chsdate
+          >.
+        </span>
+      </p>
+
+      <h2>
+        <a name="sol51"></a><span lang="EN-US">Solutions for Section 5.1</span>
+      </h2>
+
+      <h3>
+        <span lang="PT-BR" style="mso-ansi-language: PT-BR"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >5.1.1</st1:chsdate
+          >(a)<o:p></o:p
+        ></span>
+      </h3>
+
+      <pre><span lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>S -&gt; 0S1 | 01<o:p></o:p></span></pre>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="PT-BR" style="mso-ansi-language: PT-BR"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >5.1.1</st1:chsdate
+          >(b)<o:p></o:p
+        ></span>
+      </h3>
+
+      <pre><span lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>S -&gt; AB | CD<o:p></o:p></span></pre>
+      <pre><span
+lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>A -&gt; aA | epsilon<o:p></o:p></span></pre>
+      <pre><span
+lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>B -&gt; bBc | E | cD<o:p></o:p></span></pre>
+      <pre><span
+lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>C -&gt; aCb | E | aA<o:p></o:p></span></pre>
+      <pre><span
+lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>D -&gt; cD | epsilon</span></pre>
+      <pre><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>E -&gt; <span
+class=SpellE>bE</span> | b</span></pre>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >To understand how this grammar works, observe the following:
+        </span>
+      </p>
+
+      <ul type="disc">
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l3 level1 lfo3;
+            tab-stops: list 36pt;
+          "
+        >
+          <i><span lang="EN-US">A</span></i
+          ><span lang="EN-US">
+            generates zero or more <span class="SpellE"><i>a</i>'s</span>.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l3 level1 lfo3;
+            tab-stops: list 36pt;
+          "
+        >
+          <i><span lang="EN-US">D</span></i
+          ><span lang="EN-US">
+            generates zero or more <span class="SpellE"><i>c</i>'s</span>.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l3 level1 lfo3;
+            tab-stops: list 36pt;
+          "
+        >
+          <i><span lang="EN-US">E</span></i
+          ><span lang="EN-US">
+            generates one or more <span class="SpellE"><i>b</i>'s</span>.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l3 level1 lfo3;
+            tab-stops: list 36pt;
+          "
+        >
+          <i><span lang="EN-US">B</span></i
+          ><span lang="EN-US">
+            first generates an equal number of
+            <span class="SpellE"><i>b</i>'s</span> and
+            <span class="SpellE"><i>c</i>'s</span>,
+            <span class="GramE">then</span> produces either one or more
+            <span class="SpellE"><i>b</i>'s</span> (via <i>E</i>) or one or more
+            <span class="SpellE"><i>c</i>'s</span> (via
+            <span class="SpellE"><i>cD</i></span
+            >). That is, <i>B</i> generates strings in <i>b*c*</i> with an
+            unequal number of <span class="SpellE"><i>b</i>'s</span> and
+            <span class="SpellE"><i>c</i>'s</span>.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l3 level1 lfo3;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >Similarly, <i>C</i> generates unequal numbers of
+            <span class="SpellE"><i>a</i>'s</span> then
+            <span class="SpellE"><i>b</i>'s</span>.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l3 level1 lfo3;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >Thus, <i>AB</i> generates strings in <i>a*b*c*</i> with an unequal
+            numbers of <span class="SpellE"><i>b</i>'s</span> and
+            <span class="SpellE"><i>c</i>'s</span>, while <i>CD</i> generates
+            strings in <i>a*b*c*</i> with an unequal number of
+            <span class="SpellE"><i>a</i>'s</span> and
+            <span class="SpellE"><i>b</i>'s</span>.
+          </span>
+        </li>
+      </ul>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >5.1.2</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Leftmost: S =&gt; A1B =&gt;
+          <st1:chmetcnv
+            TCSC="0"
+            NumberType="1"
+            Negative="False"
+            HasSpace="False"
+            SourceValue="0"
+            UnitName="a"
+            w:st="on"
+            >0A</st1:chmetcnv
+          >1B =&gt;
+          <st1:chmetcnv
+            TCSC="0"
+            NumberType="1"
+            Negative="False"
+            HasSpace="False"
+            SourceValue="0"
+            UnitName="a"
+            w:st="on"
+            >00A</st1:chmetcnv
+          >1B =&gt; 001B =&gt; 0010B =&gt; 00101B =&gt; 00101
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Rightmost: S =&gt; A1B =&gt; A10B =&gt; A101B =&gt; A101 =&gt;
+          <st1:chmetcnv
+            TCSC="0"
+            NumberType="1"
+            Negative="False"
+            HasSpace="False"
+            SourceValue="0"
+            UnitName="a"
+            w:st="on"
+            >0A</st1:chmetcnv
+          >101 =&gt;
+          <st1:chmetcnv
+            TCSC="0"
+            NumberType="1"
+            Negative="False"
+            HasSpace="False"
+            SourceValue="0"
+            UnitName="a"
+            w:st="on"
+            >00A</st1:chmetcnv
+          >101 =&gt; 00101
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >5.1.5</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <pre><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>S -&gt; S+S | SS | S* | (S) | 0 | 1 | phi | e</span></pre>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >The idea is that these productions for <i>S</i> allow any expression
+          to be, respectively, the sum (union) of two expressions, the
+          concatenation of two expressions, the star of an expression, a
+          parenthesized expression, or one of the four basis cases of
+          expressions: 0, 1, phi, and epsilon.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+
+      <h2
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <a name="sol52"></a><span lang="EN-US">Solutions for Section 5.2</span>
+      </h2>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >5.2.1</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <pre><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>S</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/ | \</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+class=GramE>A<span style='mso-spacerun:yes'>&nbsp; </span>1</span><span style='mso-spacerun:yes'>&nbsp; </span>B</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/ |<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>/ |</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><st1:chmetcnv
+TCSC="0" NumberType="1" Negative="False" HasSpace="True" SourceValue="0"
+UnitName="a" w:st="on"><span class=GramE>0<span style='mso-spacerun:yes'>&nbsp; </span>A</span></st1:chmetcnv><span style='mso-spacerun:yes'>&nbsp; </span>0<span style='mso-spacerun:yes'>&nbsp; </span>B</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/ |<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>/ |</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><st1:chmetcnv
+TCSC="0" NumberType="1" Negative="False" HasSpace="True" SourceValue="0"
+UnitName="a" w:st="on"><span class=GramE>0<span style='mso-spacerun:yes'>&nbsp; </span>A</span></st1:chmetcnv><span style='mso-spacerun:yes'>&nbsp; </span>1<span style='mso-spacerun:yes'>&nbsp; </span>B</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>|<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>|</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+class=GramE>e</span><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+class=SpellE>e</span></span></pre>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >In the above tree, <i>e</i> stands for epsilon.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+
+      <h2
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <a name="sol53"></a><span lang="EN-US">Solutions for Section 5.3</span>
+      </h2>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >5.3.2</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <pre><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>B -&gt; BB | (B) | [B] | epsilon</span></pre>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >5.3.4</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US">Change production (5) to: </span>
+      </p>
+
+      <pre><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+class=SpellE>ListItem</span> -&gt; &lt;LI&gt; Doc &lt;/LI&gt;</span></pre>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+
+      <h2
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <a name="sol54"></a><span lang="EN-US">Solutions for Section 5.4</span>
+      </h2>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >5.4.1</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US">Here are the parse trees: </span>
+      </p>
+
+      <pre><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=PT-BR style='mso-ansi-language:PT-BR'>S<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>S<o:p></o:p></span></pre>
+      <pre><span
+lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/ |<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/ / | \<o:p></o:p></span></pre>
+      <pre><span
+lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>a<span style='mso-spacerun:yes'>&nbsp; </span>S<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>a S<span style='mso-spacerun:yes'>&nbsp; </span>b<span style='mso-spacerun:yes'>&nbsp; </span>S<o:p></o:p></span></pre>
+      <pre><span
+lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>/ | \ \<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>| \<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>|<o:p></o:p></span></pre>
+      <pre><span
+lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>a<span style='mso-spacerun:yes'>&nbsp; </span>S<span style='mso-spacerun:yes'>&nbsp; </span>b S<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>a<span style='mso-spacerun:yes'>&nbsp; </span>S<span style='mso-spacerun:yes'>&nbsp; </span>e<o:p></o:p></span></pre>
+      <pre><span
+lang=PT-BR style='mso-ansi-language:PT-BR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>|<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>|<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>|</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+class=GramE>e</span><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span
+class=SpellE>e</span><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+class=SpellE>e</span></span></pre>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >The two leftmost derivations are: S =&gt;
+          <span class="SpellE">aS</span> =&gt;
+          <span class="SpellE">aaSbS</span> =&gt;
+          <span class="SpellE">aabS</span> =&gt;
+          <span class="SpellE">aab</span> and S =&gt;
+          <span class="SpellE">aSbS</span> =&gt;
+          <span class="SpellE">aaSbS</span> =&gt;
+          <span class="SpellE">aabS</span> =&gt;
+          <span class="SpellE">aab</span>.
+        </span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >The two rightmost derivations are: S =&gt;
+          <span class="SpellE">aS</span> =&gt;
+          <span class="SpellE">aaSbS</span> =&gt;
+          <span class="SpellE">aaSb</span> =&gt;
+          <span class="SpellE">aab</span> and S =&gt;
+          <span class="SpellE">aSbS</span> =&gt;
+          <span class="SpellE">aSb</span> =&gt;
+          <span class="SpellE">aaSb</span> =&gt;
+          <span class="SpellE">aab</span>.
+        </span>
+      </p>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >5.4.3</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >The idea is to introduce another
+          <span class="SpellE">nonterminal</span> <i>T</i> that cannot generate
+          an unbalanced <i>a</i>. That strategy corresponds to the usual rule in
+          programming languages that an ``else'' is associated with the closest
+          previous, unmatched ``then.'' Here, we force a <i>b</i> to match the
+          previous unmatched <i>a</i>. The grammar:
+        </span>
+      </p>
+
+      <pre><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span style='mso-spacerun:yes'>&nbsp;&nbsp;</span>S -&gt; <span
+class=SpellE>aS</span> | <span class=SpellE>aTbS</span> | epsilon</span></pre>
+      <pre><span
+lang=EN-US><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>T -&gt; <span
+class=SpellE>aTbT</span> | epsilon</span></pre>
+
+      <h3
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >5.4.6</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          >Alas, it is not. We need to have three
+          <span class="SpellE">nonterminals</span>, corresponding to the three
+          possible ``strengths'' of expressions:
+        </span>
+      </p>
+
+      <ol start="1" type="1">
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l2 level1 lfo6;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >A <i>factor</i> cannot be broken by any operator. These are the
+            basis expressions, parenthesized expressions, and these expressions
+            followed by one or more *'s.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l2 level1 lfo6;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >A <i>term</i> can be broken only by a *. For example, consider 01,
+            where the 0 and 1 are concatenated, but if we follow it by a *, it
+            becomes 0(1*), and the concatenation has been ``broken'' by the *.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l2 level1 lfo6;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >An <i>expression</i> can be broken by concatenation or *, but not
+            by +. An example is the expression 0+1. Note that if we concatenate
+            (say) 1 or follow by a *, we parse the expression 0<span
+              class="GramE"
+              >+(</span
+            >11) or 0+(1*), and in either case the union has been broken.
+          </span>
+        </li>
+      </ol>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="FR" style="mso-ansi-language: FR"
+          >The grammar: <o:p></o:p
+        ></span>
+      </p>
+
+      <pre><span lang=FR style='mso-ansi-language:FR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>E -&gt; E+T | T<o:p></o:p></span></pre>
+      <pre><span
+lang=FR style='mso-ansi-language:FR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>T -&gt; TF | F<o:p></o:p></span></pre>
+      <pre><span
+lang=FR style='mso-ansi-language:FR'><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=PT-BR style='mso-ansi-language:PT-BR'>F -&gt; F* | (E) | 0 | 1 | phi | e<o:p></o:p></span></pre>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"
+          ><a href="solutions.htm">Return to Home</a><i><o:p></o:p></i
+        ></span>
+      </p>
+
+      <p
+        style="
+          tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229pt 274.8pt 320.6pt 366.4pt
+            412.2pt 458pt 503.8pt 549.6pt 595.4pt 641.2pt 687pt 732.8pt;
+        "
+      >
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+    </div>
+  </body>
+</html>

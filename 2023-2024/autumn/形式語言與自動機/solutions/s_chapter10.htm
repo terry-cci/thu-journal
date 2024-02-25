@@ -1,0 +1,614 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="s_chapter10.files/filelist.xml">
+<title>Introduction to Automata Theory, Languages, and Computation: Solutions
+for Chapter 10</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="chmetcnv"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="chsdate"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>wang</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>wangshengyuan</o:LastAuthor>
+  <o:Revision>9</o:Revision>
+  <o:TotalTime>3</o:TotalTime>
+  <o:Created>2002-01-23T01:38:00Z</o:Created>
+  <o:LastSaved>2011-11-19T08:20:00Z</o:LastSaved>
+  <o:Pages>4</o:Pages>
+  <o:Words>1366</o:Words>
+  <o:Characters>7789</o:Characters>
+  <o:Company>wyy</o:Company>
+  <o:Lines>64</o:Lines>
+  <o:Paragraphs>18</o:Paragraphs>
+  <o:CharactersWithSpaces>9137</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:DrawingGridVerticalSpacing>7.8 ��</w:DrawingGridVerticalSpacing>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family: "Cambria Math";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:SimSun;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family: "Cambria Math";
+	mso-bidi-font-family:"Geneva";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family: "Cambria Math";
+	mso-bidi-font-family:"Geneva";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+ /* Page Definitions */
+ @page
+	{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:494539332;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-9123664 -1662990676 1100527998 -1072415660 -1426165600 1045732016 -1204389402 19681888 -2135531760 1543251476;}
+@list l0:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:552808563;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-702536374 13037360 -1661682828 -841073784 592374704 1050195032 561308668 -849172196 113802878 621194516;}
+@list l1:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:849757748;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-693210138 -1265447694 30023370 -1789499502 -1198460386 189279026 -1669064032 -1221417928 -1861330004 937095078;}
+@list l2:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:1011369097;
+	mso-list-template-ids:414613338;}
+@list l4
+	{mso-list-id:1255745476;
+	mso-list-template-ids:-1895398942;}
+@list l5
+	{mso-list-id:1571454257;
+	mso-list-template-ids:433646940;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:��ͨCambria Math;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Geneva";
+	mso-fareast-font-family:"Geneva";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor="black" lang=ZH-CN link=blue vlink=blue style='tab-interval:
+21.0pt'>
+
+<div class=Section1>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-padding-alt:0cm 0cm 0cm 0cm'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:24.0pt'>Introduction to Automata Theory, Languages, and
+  Computation</span><span lang=EN-US> </span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<h2 align=center style='text-align:center'><a name=top></a><span lang=EN-US>Solutions
+for Chapter 10</span></h2>
+
+<p class=MsoNormal><span lang=EN-US>Revised <st1:chsdate IsROCDate="False"
+IsLunarDate="False" Day="30" Month="6" Year="2001" w:st="on">6/30/01</st1:chsdate>.
+</span></p>
+
+<p><span lang=EN-US><span style='mso-spacerun:yes'>&nbsp;</span></span></p>
+
+<h2><a name=sol101></a><span lang=EN-US>Solutions for Section 10.1</span></h2>
+
+<h3><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False" IsLunarDate="False"
+Day="30" Month="12" Year="1899" w:st="on">10.1.1</st1:chsdate>(a)</span></h3>
+
+<p class=MsoNormal><span lang=EN-US>The MWST would then be the line from 1 to 2
+to 3 to 4. </span></p>
+
+<h3><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False" IsLunarDate="False"
+Day="30" Month="12" Year="1899" w:st="on">10.1.3</st1:chsdate></span></h3>
+
+<p class=MsoNormal><span lang=EN-US>For every problem <i>P</i> in <b>NP</b>
+there would be some polynomial <i>p</i> that bounded the running time (and
+therefore the output length) of the reduction from <i>P</i> to the NP-complete
+problem in question. That would imply an algorithm for <i>P</i> that ran in
+time <span class=GramE><i>O(</i></span><i>p(n) + [p(n)]^{log_2(p(n))})</i>. The
+first term, <span class=GramE><i>p(</i></span><i>n)</i>, can be neglected. The
+exponent is <i>k log n</i> for some constant <i>k</i>. Moreover, <span
+class=GramE><i>p(</i></span><i>n)^k</i> is at most <span class=SpellE><i>n^k</i></span><i>'</i>
+for some other constant <i>k'</i>. Thus, we can say that there would be some
+constant <i>c</i> such that problem <i>P</i> could be solved in time <span
+class=GramE><i>O(</i></span><i>n^{c log_2 n})</i>. </span></p>
+
+<h3><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False" IsLunarDate="False"
+Day="30" Month="12" Year="1899" w:st="on">10.1.5</st1:chsdate>(a)</span></h3>
+
+<p class=MsoNormal><span lang=EN-US>Given <i>(G<span class=GramE>,A,B</span>)</i>,
+construct <i>G1</i> and <i>G2</i> to be <i>G</i>, with start symbols <i>A</i>
+and <i>B</i>, respectively. Since this transformation is essentially copying,
+it can be performed in linear time, and is therefore surely a polynomial-time
+reduction. </span></p>
+
+<h3><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False" IsLunarDate="False"
+Day="30" Month="12" Year="1899" w:st="on">10.1.5</st1:chsdate>(c)</span></h3>
+
+<p class=MsoNormal><span lang=EN-US>Absolutely nothing! Part of any
+NP-completeness proof is a part that shows the problem to be in <b>NP</b>.
+These problems are, in fact, <span class=SpellE>undecidable</span>, and
+therefore surely not in <b>NP</b>. </span></p>
+
+<h3><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False" IsLunarDate="False"
+Day="30" Month="12" Year="1899" w:st="on">10.1.6</st1:chsdate>(b)</span></h3>
+
+<p class=MsoNormal><span lang=EN-US>Test for membership in one language and
+then, if the input is not in the first, test for membership in the second. The
+time taken is no more than the sum of the times taken to recognize each
+language. Since both <span class=SpellE>ar</span> in <b>P</b>, then can each be
+recognized in polynomial time, and the sum of polynomials is a polynomial.
+Thus, their union is in <b>P</b>. </span></p>
+
+<h3><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False" IsLunarDate="False"
+Day="30" Month="12" Year="1899" w:st="on">10.1.6</st1:chsdate>(c)</span></h3>
+
+<p class=MsoNormal><span lang=EN-US>Let <i>L1</i> and <i>L2</i> be languages in
+<b>P</b>, and suppose we want to recognize their concatenation. Suppose we are
+given an input of length <i>n</i>. For each <span class=SpellE><i>i</i></span>
+between 1 and <i>n-1</i>, test whether positions 1 through <span class=SpellE><i>i</i></span>
+holds a string in <i>L1</i> and positions <i>i+1</I. >n hold a string in L2. If
+so, accept; the input is in L<st1:chmetcnv TCSC="0" NumberType="1"
+Negative="False" HasSpace="False" SourceValue="1" UnitName="l" w:st="on">1L</st1:chmetcnv>2.
+If the test fails for all <span class=SpellE>i</span>, reject the input. <o:p></o:p></i></span></p>
+
+<p><i><span lang=EN-US>The running time of this test is at most n times the sum
+of the running times of the recognizers for L1 and L2. Since the latter are
+both polynomials, so is the running time for the TM just <span class=GramE>described.</span>
+<o:p></o:p></span></i></p>
+
+<h3><i><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False"
+IsLunarDate="False" Day="30" Month="12" Year="1899" w:st="on">10.1.6</st1:chsdate>(f)<o:p></o:p></span></i></h3>
+
+<p class=MsoNormal><i><span lang=EN-US>Given a polynomial-time TM M for L, we
+can modify M to accept the complement of L as follows: <o:p></o:p></span></i></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo3;tab-stops:list 36.0pt'><i><span lang=EN-US>Make
+     each accepting state of M a <span class=SpellE>nonaccepting</span> state
+     from which there are no moves. Thus, if M accepts, the new TM will halt
+     without accepting. <o:p></o:p></span></i></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l1 level1 lfo3;tab-stops:list 36.0pt'><i><span lang=EN-US>Create
+     a new state q, which is the only accepting state in the new TM. For each
+     state-symbol combination that has no move, <span class=SpellE>hte</span>
+     new TM enters state q, whereupon it accepts and halts. <o:p></o:p></span></i></li>
+</ol>
+
+<p><i><span lang=EN-US><o:p>&nbsp;</o:p></span></i></p>
+
+<h2><a name=sol102></a><i><span lang=EN-US>Solutions for Section 10.2<o:p></o:p></span></i></h2>
+
+<h3><i><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False"
+IsLunarDate="False" Day="30" Month="12" Year="1899" w:st="on">10.2.1</st1:chsdate>(a)<o:p></o:p></span></i></h3>
+
+<p class=MsoNormal><i><span lang=EN-US>Choosing x = y = z = 1 makes the
+expression <span class=SpellE>satisfiable</span>. Thus, the expression is in
+SAT. <o:p></o:p></span></i></p>
+
+<h3><i><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False"
+IsLunarDate="False" Day="30" Month="12" Year="1899" w:st="on">10.2.2</st1:chsdate>(a)<o:p></o:p></span></i></h3>
+
+<p class=MsoNormal><i><span lang=EN-US>There are actually only three distinct <st1:City
+w:st="on"><st1:place w:st="on">Hamilton</st1:place></st1:City> circuits, once
+we account for the differences in direction and differences in starting point.
+These three circuits are (1,2,3,4), (1,3,2,4), and (1,3,4,2). We can express
+the existence of one of these three circuits (using the simplified notation of
+Section 10.3) by: x12x23x34x14 + x13x23x24x14 + x13x34x24x12. <o:p></o:p></span></i></p>
+
+<h2><a name=sol103></a><i><span lang=EN-US>Solutions for Section 10.3<o:p></o:p></span></i></h2>
+
+<h3><i><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False"
+IsLunarDate="False" Day="30" Month="12" Year="1899" w:st="on">10.3.1</st1:chsdate>(a)<o:p></o:p></span></i></h3>
+
+<p class=MsoNormal><span class=GramE><i><span lang=EN-US>In what follows, [-x]
+stands for x-bar, the complement of x.</span></i></span><i><span lang=EN-US>
+We'll begin by using the construction to put it into CNF. <span class=SpellE><span
+class=GramE>xy</span></span> is already the product of clauses (x)(y), and
+[-x]z is the product of clauses ([-x])(z). When we use the OR construction to
+combine these, we get (<span class=SpellE>x+u</span><span class=GramE>)(</span><span
+class=SpellE>y+u</span>)([-x]+[-u])(z+[-u]). <o:p></o:p></span></i></p>
+
+<p><i><span lang=EN-US>Now, to put this expression into 3-CNF, we have only to
+expand the four clauses, each of which has only two literals, by introducing
+four new variables and doubling the number of clauses. </span></i><i><span
+lang=FR style='mso-ansi-language:FR'>The result:
+(x+u+v1)(x+u+[-v1])(y+u+v2)(y+u+[-v2])([-x]+[-u]+v3)([-x]+[-u]+[-v3])(z+[-u]+v4)(z+[-u]+[-v4]).
+<o:p></o:p></span></i></p>
+
+<h3><i><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False"
+IsLunarDate="False" Day="30" Month="12" Year="1899" w:st="on">10.3.3</st1:chsdate>(a)<o:p></o:p></span></i></h3>
+
+<p class=MsoNormal><i><span lang=EN-US>It is <span class=SpellE>satisfiable</span>.
+Let any two variables be assigned TRUE, say x1 and x2, and let the other two
+variables be assigned FALSE. Then in any set of three variables, there must be
+at least one true and at least one false. Thus, none of the clauses can be
+false. <o:p></o:p></span></i></p>
+
+<p><i><span lang=EN-US><o:p>&nbsp;</o:p></span></i></p>
+
+<h2><a name=sol104></a><i><span lang=EN-US>Solutions for Section 10.4<o:p></o:p></span></i></h2>
+
+<h3><i><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False"
+IsLunarDate="False" Day="30" Month="12" Year="1899" w:st="on">10.4.1</st1:chsdate><o:p></o:p></span></i></h3>
+
+<p class=MsoNormal><i><span lang=EN-US>For part (a): There are triangles
+(3-cliques), such as {1<span class=GramE>,2,3</span>}. However, there is no
+4-clique, since there are only 4 nodes, and one edge is missing. Thus k = 3 is
+the answer. <o:p></o:p></span></i></p>
+
+<p><i><span lang=EN-US>For part (b): All pairs of nodes must have an edge
+between them, and the number of pairs of k nodes is k choose 2, or <span
+class=GramE>k(</span>k-1)/2. <o:p></o:p></span></i></p>
+
+<p><i><span lang=EN-US>For part (c): We reduce NC to CLIQUE as follows. Suppose
+we are given an instance (<span class=SpellE>G<span class=GramE>,k</span></span>)
+of NC. Construct the instance (<span class=SpellE>G'<span class=GramE>,n</span></span>-k)
+of CLIQUE, where n is the total number of nodes of G, and G' is G with the set of
+edges complemented; that is, G' has edge (<span class=SpellE>u,v</span>) if and
+only if G does not have that edge. <o:p></o:p></span></i></p>
+
+<p><i><span lang=EN-US>We must show that G has a node cover of size k if and
+only if G' has a clique of size n-k. First, let C be a node cover of G of size
+k. We claim that C', the complement of the nodes in C, is a clique in G' of
+size n-k. Surely C' is of size n-k. Suppose it is not a clique. Then there is a
+pair of nodes (<span class=SpellE>u<span class=GramE>,v</span></span>) that do
+not have an edge in G'. Thus this edge is in G. But neither u nor v is in C,
+contradicting the assumption that is <span class=SpellE>is</span> a node cover.
+<o:p></o:p></span></i></p>
+
+<p><i><span lang=EN-US>Conversely, if C' is a clique of size n-k in G', then we
+claim that C the complement of C', is a node cover of size k in G. The argument
+is similar: if (<span class=SpellE>u<span class=GramE>,v</span></span>) is an
+edge of G not covered by C, then both u and v are in C', but the edge (<span
+class=SpellE>u,v</span>) is not in G', contradicting the assumption that C' is
+a clique. <o:p></o:p></span></i></p>
+
+<h3><i><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False"
+IsLunarDate="False" Day="30" Month="12" Year="1899" w:st="on">10.4.2</st1:chsdate><o:p></o:p></span></i></h3>
+
+<p class=MsoNormal><i><span lang=EN-US>For each clause, we add one node, and
+connect it so that it can only be colored in one of the <span class=GramE>n+1
+available colors</span> if the clause is made true. Suppose the clause consists
+of literals with variables xi, <span class=SpellE>xj</span>, and <span
+class=SpellE>xk</span>, possibly negated. The node for the clause is connected
+to: <o:p></o:p></span></i></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><span class=SpellE><span
+     class=GramE><i><span lang=EN-US>xm</span></i></span></span><i><span
+     lang=EN-US> for all m = 0, 1,..., n, except for <span class=SpellE>i</span>,
+     j, and k. Thus, the only possible colors for the nodes are the ones used
+     for its literals. <o:p></o:p></span></i></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><i><span lang=EN-US>If the
+     literal with xi is positive (not negated), connect the node for the clause
+     to the node for <span class=SpellE>xI</span>. If the literal is negated,
+     connect the node for the clause to the node for xi-bar. <o:p></o:p></span></i></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l2 level1 lfo6;tab-stops:list 36.0pt'><i><span lang=EN-US>Connect
+     to nodes for <span class=SpellE>xj</span> and <span class=SpellE>xk</span>,
+     analogously. <o:p></o:p></span></i></li>
+</ol>
+
+<p><i><span lang=EN-US>Now, if at least one of the literals of the clause is
+made true by the assignment where the color c0 corresponds to truth, then that
+literal will not be colored with the color for its variable, and we can use
+that color for the clause's node. However, if the truth assignment makes all three
+literals false, then the clause's node is connected to nodes of all n+1 colors,
+and we cannot complete the coloring. Thus, coloring the complete graph with <span
+class=GramE>n+1 colors</span> is possible if and only if there is a satisfying
+truth assignment for the 3-CNF expression. <o:p></o:p></span></i></p>
+
+<h3><i><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False"
+IsLunarDate="False" Day="30" Month="12" Year="1899" w:st="on">10.4.3</st1:chsdate>(a)<o:p></o:p></span></i></h3>
+
+<p class=MsoNormal><i><span lang=EN-US>Yes; a <st1:City w:st="on"><st1:place
+ w:st="on">Hamilton</st1:place></st1:City> circuit can be found by going around
+the inner circle, say from 11 to 20, clockwise, then to 10, around the outer
+circle counterclockwise, to 1, and then back to 11. <o:p></o:p></span></i></p>
+
+<h3><i><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False"
+IsLunarDate="False" Day="30" Month="12" Year="1899" w:st="on">10.4.4</st1:chsdate>(f)<o:p></o:p></span></i></h3>
+
+<p class=MsoNormal><i><span lang=EN-US>Let (<span class=SpellE>G<span
+class=GramE>,k</span></span>) be an instance of the clique problem, and suppose
+G has n nodes. We produce an instance of the half-clique problem, as follows: <o:p></o:p></span></i></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo9;tab-stops:list 36.0pt'><i><span lang=EN-US>If k =
+     n/2, just produce G. Note that G has a half-clique if and only if it has a
+     clique of size k. in this case. <o:p></o:p></span></i></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo9;tab-stops:list 36.0pt'><i><span lang=EN-US>If k
+     &gt; n/2, add 2k - n isolated nodes (nodes with no incident edges). The
+     resulting graph has a half-clique (whose size must be (n + (2k-n))/2 = 2k,
+     if and only if G has a clique of size k. <o:p></o:p></span></i></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo9;tab-stops:list 36.0pt'><i><span lang=EN-US>If k
+     &lt; n/2, add n - 2k nodes, and connect them in all possible ways to each
+     other and to the original nodes of G. The new graph thus has 2(n-k) nodes.
+     The new nodes, plus a clique of size k in G form a clique of size (n-2k) +
+     k = n-k, which is half the number of nodes in the new graph. Conversely,
+     if the new graph has a half-clique, then it must include at least (n-k) -
+     (n-2k) = k nodes of the graph G, implying that G has a clique of size k. <o:p></o:p></span></i></li>
+</ol>
+
+<p><i><span lang=EN-US>These steps complete a reduction of CLIQUE to
+HALF-CLIQUE. It is evidently performable in polynomial time, since the number
+of new nodes and edges is at most the square of the original number of nodes,
+and the rules for adding nodes and edges are simple to carry out. <o:p></o:p></span></i></p>
+
+<h3><i><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False"
+IsLunarDate="False" Day="30" Month="12" Year="1899" w:st="on">10.4.5</st1:chsdate>(a)<o:p></o:p></span></i></h3>
+
+<p class=MsoNormal><i><span lang=EN-US>Following the hint, pick any node x in
+graph G. Add a duplicate node y that is adjacent to exactly those nodes to
+which x is adjacent. Then, add new nodes u and v that are adjacent to x and y,
+respectively, and no other nodes. Call the resulting graph G'. <o:p></o:p></span></i></p>
+
+<p><i><span lang=EN-US>We claim G' has a <st1:City w:st="on">Hamilton</st1:City>
+path if and only if G has a <st1:City w:st="on"><st1:place w:st="on">Hamilton</st1:place></st1:City>
+circuit. If G has a Hamilton circuit, the following is a Hamilton path in G':
+start at u, go to x, follow the Hamilton circuit, but end at y instead of x,
+and then go to v. <o:p></o:p></span></i></p>
+
+<p><i><span lang=EN-US>If G' has a <st1:City w:st="on"><st1:place w:st="on">Hamilton</st1:place></st1:City>
+path, it must start at u and end at v, or vice-versa (which is really the same
+path. Moreover, the path must go from <span class=SpellE>x</I. >y</span>, visiting
+all the nodes of G as it does. Thus, if we replace y by x along this path, we
+get a <st1:City w:st="on"><st1:place w:st="on">Hamilton</st1:place></st1:City>
+circuit in G. <o:p></o:p></span></i></p>
+
+<h3><i><span lang=EN-US>Exercise <st1:chsdate IsROCDate="False"
+IsLunarDate="False" Day="30" Month="12" Year="1899" w:st="on">10.4.5</st1:chsdate>(c)<o:p></o:p></span></i></h3>
+
+<p class=MsoNormal><i><span lang=EN-US>A spanning tree with two leaf nodes is a
+<st1:City w:st="on"><st1:place w:st="on">Hamilton</st1:place></st1:City> path.
+Thus, the <st1:City w:st="on"><st1:place w:st="on">Hamilton</st1:place></st1:City>
+path problem reduces to the question of whether a graph has a spanning tree
+with only 2 leaf nodes. Surely, then, <st1:City w:st="on"><st1:place w:st="on">Hamilton</st1:place></st1:City>
+path reduces to the more general problem stated in the question, where the
+number of leaf nodes is a parameter of the problem. <o:p></o:p></span></i></p>
+
+<p><span lang=EN-US><a href="solutions.htm">Return to Home</a><i><o:p></o:p></i></span></p>
+
+<p><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

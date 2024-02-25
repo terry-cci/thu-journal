@@ -1,0 +1,928 @@
+<html
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:w="urn:schemas-microsoft-com:office:word"
+  xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+  xmlns="http://www.w3.org/TR/REC-html40"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="ProgId" content="Word.Document" />
+    <meta name="Generator" content="Microsoft Word 11" />
+    <meta name="Originator" content="Microsoft Word 11" />
+    <link rel="File-List" href="s_chapter11.files/filelist.xml" />
+    <title>
+      Introduction to Automata Theory, Languages, and Computation: Solutions for
+      Chapter 11
+    </title>
+    <o:SmartTagType
+      namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+      name="chsdate"
+    />
+    <!--[if gte mso 9
+      ]><xml>
+        <o:DocumentProperties>
+          <o:Author>wang</o:Author>
+          <o:Template>Normal</o:Template>
+          <o:LastAuthor>wangshengyuan</o:LastAuthor>
+          <o:Revision>8</o:Revision>
+          <o:TotalTime>5</o:TotalTime>
+          <o:Created>2002-01-23T01:39:00Z</o:Created>
+          <o:LastSaved>2011-11-19T08:18:00Z</o:LastSaved>
+          <o:Pages>3</o:Pages>
+          <o:Words>1178</o:Words>
+          <o:Characters>6719</o:Characters>
+          <o:Company>wyy</o:Company>
+          <o:Lines>55</o:Lines>
+          <o:Paragraphs>15</o:Paragraphs>
+          <o:CharactersWithSpaces>7882</o:CharactersWithSpaces>
+          <o:Version>11.9999</o:Version>
+        </o:DocumentProperties>
+      </xml><!
+    [endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <w:WordDocument>
+          <w:SpellingState>Clean</w:SpellingState>
+          <w:GrammarState>Clean</w:GrammarState>
+          <w:DrawingGridVerticalSpacing>7.8 ��</w:DrawingGridVerticalSpacing>
+          <w:ValidateAgainstSchemas />
+          <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+          <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+          <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+          <w:Compatibility>
+            <w:UseFELayout />
+          </w:Compatibility>
+          <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+        </w:WordDocument>
+      </xml><!
+    [endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+        </w:LatentStyles> </xml
+    ><![endif]-->
+    <!--[if !mso
+      ]><object
+        classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D"
+        id="ieooui"
+      ></object>
+      <style>
+        st1\:* {
+          behavior: url(#ieooui);
+        }
+      </style>
+    <![endif]-->
+    <style>
+      <!--
+       /* Font Definitions */
+       @font-face
+      	{font-family:Wingdings;
+      	panose-1:5 0 0 0 0 0 0 0 0 0;
+      	mso-font-charset:2;
+      	mso-generic-font-family:auto;
+      	mso-font-pitch:variable;
+      	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+      @font-face
+      	{font-family: "Cambria Math";
+      	panose-1:2 1 6 0 3 1 1 1 1 1;
+      	mso-font-alt:SimSun;
+      	mso-font-charset:134;
+      	mso-generic-font-family:auto;
+      	mso-font-pitch:variable;
+      	mso-font-signature:3 135135232 16 0 262145 0;}
+      @font-face
+      	{font-family:"Cambria Math";
+      	panose-1:2 1 6 0 3 1 1 1 1 1;
+      	mso-font-charset:134;
+      	mso-generic-font-family:auto;
+      	mso-font-pitch:variable;
+      	mso-font-signature:3 135135232 16 0 262145 0;}
+       /* Style Definitions */
+       p.MsoNormal, li.MsoNormal, div.MsoNormal
+      	{mso-style-parent:"";
+      	margin:0cm;
+      	margin-bottom:.0001pt;
+      	mso-pagination:widow-orphan;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Geneva";}
+      a:link, span.MsoHyperlink
+      	{color:blue;
+      	text-decoration:underline;
+      	text-underline:single;}
+      a:visited, span.MsoHyperlinkFollowed
+      	{color:blue;
+      	text-decoration:underline;
+      	text-underline:single;}
+      p
+      	{mso-margin-top-alt:auto;
+      	margin-right:0cm;
+      	mso-margin-bottom-alt:auto;
+      	margin-left:0cm;
+      	mso-pagination:widow-orphan;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Geneva";}
+      span.SpellE
+      	{mso-style-name:"";
+      	mso-spl-e:yes;}
+      span.GramE
+      	{mso-style-name:"";
+      	mso-gram-e:yes;}
+       /* Page Definitions */
+       @page
+      	{mso-page-border-surround-header:no;
+      	mso-page-border-surround-footer:no;}
+      @page Section1
+      	{size:595.3pt 841.9pt;
+      	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+      	mso-header-margin:42.55pt;
+      	mso-footer-margin:49.6pt;
+      	mso-paper-source:0;}
+      div.Section1
+      	{page:Section1;}
+       /* List Definitions */
+       @list l0
+      	{mso-list-id:550311182;
+      	mso-list-type:hybrid;
+      	mso-list-template-ids:-696514150 -684281944 1441047902 2123278192 515135146 1146012642 670849926 -1328120834 1191188402 1558206138;}
+      @list l0:level1
+      	{mso-level-tab-stop:36.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level2
+      	{mso-level-tab-stop:72.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level3
+      	{mso-level-tab-stop:108.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level4
+      	{mso-level-tab-stop:144.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level5
+      	{mso-level-tab-stop:180.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level6
+      	{mso-level-tab-stop:216.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level7
+      	{mso-level-tab-stop:252.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level8
+      	{mso-level-tab-stop:288.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level9
+      	{mso-level-tab-stop:324.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l1
+      	{mso-list-id:732000192;
+      	mso-list-template-ids:-791503950;}
+      @list l2
+      	{mso-list-id:1446147569;
+      	mso-list-type:hybrid;
+      	mso-list-template-ids:-10056210 1655047638 1388317932 291031128 -2134217662 -1324863798 1130527694 360629620 -1621354712 -584295170;}
+      @list l2:level1
+      	{mso-level-tab-stop:36.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level2
+      	{mso-level-tab-stop:72.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level3
+      	{mso-level-number-format:bullet;
+      	mso-level-text:\F0A7;
+      	mso-level-tab-stop:108.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;
+      	mso-ansi-font-size:10.0pt;
+      	font-family:Wingdings;}
+      @list l2:level4
+      	{mso-level-tab-stop:144.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level5
+      	{mso-level-tab-stop:180.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level6
+      	{mso-level-tab-stop:216.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level7
+      	{mso-level-tab-stop:252.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level8
+      	{mso-level-tab-stop:288.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l2:level9
+      	{mso-level-tab-stop:324.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3
+      	{mso-list-id:1518688664;
+      	mso-list-template-ids:-988393566;}
+      @list l3:level1
+      	{mso-level-start-at:3;
+      	mso-level-tab-stop:36.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l3:level3
+      	{mso-level-number-format:bullet;
+      	mso-level-text:\F0A7;
+      	mso-level-tab-stop:108.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;
+      	mso-ansi-font-size:10.0pt;
+      	font-family:Wingdings;}
+      @list l4
+      	{mso-list-id:1788308762;
+      	mso-list-template-ids:-1903421018;}
+      ol
+      	{margin-bottom:0cm;}
+      ul
+      	{margin-bottom:0cm;}
+      -->
+    </style>
+    <!--[if gte mso 10]>
+      <style>
+        /* Style Definitions */
+        table.MsoNormalTable {
+          mso-style-name: ��ͨCambria Math;
+          mso-tstyle-rowband-size: 0;
+          mso-tstyle-colband-size: 0;
+          mso-style-noshow: yes;
+          mso-style-parent: "";
+          mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;
+          mso-para-margin: 0cm;
+          mso-para-margin-bottom: 0.0001pt;
+          mso-pagination: widow-orphan;
+          font-size: 10pt;
+          font-family: "Geneva";
+          mso-fareast-font-family: "Geneva";
+          mso-ansi-language: #0400;
+          mso-fareast-language: #0400;
+          mso-bidi-language: #0400;
+        }
+      </style>
+    <![endif]-->
+    <!--[if gte mso 9
+      ]><xml> <o:shapedefaults v:ext="edit" spidmax="1026" /> </xml
+    ><![endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <o:shapelayout v:ext="edit">
+          <o:idmap v:ext="edit" data="1" /> </o:shapelayout></xml
+    ><![endif]-->
+  </head>
+
+  <body
+    bgcolor="black"
+    lang="ZH-CN"
+    link="blue"
+    vlink="blue"
+    text="white"
+    style="tab-interval: 21pt"
+  >
+    <div class="Section1">
+      <div align="center">
+        <table
+          class="MsoNormalTable"
+          border="0"
+          cellpadding="0"
+          style="mso-cellspacing: 1.5pt; mso-padding-alt: 0cm 0cm 0cm 0cm"
+        >
+          <tr
+            style="
+              mso-yfti-irow: 0;
+              mso-yfti-firstrow: yes;
+              mso-yfti-lastrow: yes;
+            "
+          >
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal">
+                <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <span lang="EN-US" style="font-size: 24pt"
+                  >Introduction to Automata Theory, Languages, and
+                  Computation</span
+                ><span lang="EN-US"> </span>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <h2 align="center" style="text-align: center">
+        <a name="top"></a><span lang="EN-US">Solutions for Chapter 11</span>
+      </h2>
+
+      <p>
+        <span lang="EN-US"><span style="mso-spacerun: yes">&nbsp;</span></span>
+      </p>
+
+      <h2>
+        <a name="sol111"></a
+        ><span lang="EN-US">Solutions for Section 11.1</span>
+      </h2>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >11.1.1</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >The problem is in <b>NP</b>. We need only to test whether the
+          expression is true when all variables are true (a polynomial-time,
+          deterministic step) and then guess and check some other assignment.
+          Notice that if an expression is not true when all variables are true,
+          then it is surely not in TRUE-SAT.
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >The complement of TRUE-SAT consists of all inputs that are not
+          well-formed expressions, inputs that are well-formed expressions but
+          that are false when all variables are
+          <span class="GramE">true,</span> and well-formed expressions that are
+          true only when all variables are true. We shall show TRUE-SAT is
+          NP-complete, so it is unlikely that the complement is in <b>NP</b>.
+        </span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          >To show TRUE-SAT is NP-complete, we reduce SAT to it. Suppose we are
+          given an expression <i>E</i> with variables
+          <i
+            >x1, x2<span class="GramE">,...,</span>
+            <span class="SpellE">xn</span></i
+          >. Convert <i>E</i> to <i>E'</i> as follows:
+        </span>
+      </p>
+
+      <ol start="1" type="1">
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l0 level1 lfo3;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >First, test if <i>E</i> is true when all variables are true. If so,
+            we know <i>E</i> is <span class="SpellE">satisfiable</span>, and so
+            convert it to a specific expression
+            <span class="SpellE"><i>x+y</i></span> that we know is in TRUE-SAT.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l0 level1 lfo3;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >Otherwise, let <i>E' = E + x1x2...<span class="SpellE">xn</span></i
+            >, surely a polynomial-time reduction. Surely <i>E'</i> is true when
+            all variables are true. If <i>E</i> is in SAT, then it is satisfied
+            by some truth assignment other all all-true, because we tested
+            all-true and found <i>E</i> to be false. Thus, <i>E'</i> is in
+            TRUE-SAT. Conversely, if <i>E'</i> is in TRUE-SAT, then since
+            <i>x1x2...<span class="SpellE">xn</span></i> is true only for the
+            all-true assignment, <i>E</i> must be
+            <span class="SpellE">satisfiable</span>.
+          </span>
+        </li>
+      </ol>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >11.1.2</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >There are three things to show. The language is in <b>NP</b>, in
+          co-<b>NP</b>, and not in <b>P</b>.
+        </span>
+      </p>
+
+      <ol start="1" type="1">
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l2 level1 lfo6;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >To show the language is in <b>NP</b>, guess <i>z</i>, compute
+            <span class="GramE"><i>f(</i></span
+            ><i>z)</i> deterministically in polynomial time, and test whether
+            <i>f(z) = x</i>. When the guess of <i>z</i> is correct, we have
+            <i>f<span class="GramE">^{</span>-1}(x)</i>. Compare it with
+            <i>y</i>, and accept the pair
+            <i
+              >(<span class="SpellE">x<span class="GramE">,y</span></span
+              >)</i
+            >
+            if <i>z &lt; y</i>.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l2 level1 lfo6;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >To show the language to be in co-<b>NP</b>, we have to show the
+            complement --- the set of inputs that are not of the form
+            <i
+              >(<span class="SpellE">x<span class="GramE">,y</span></span
+              >)</i
+            >, where <i>f^{-1}(x) &lt; y</i>, is in <b>NP</b>. It is easy to
+            check for ill-formed inputs, so the hard part is checking whether
+            <i>f<span class="GramE">^{</span>-1}(x) &gt;= y</i>. However, the
+            trick from part (1) works. Guess <i>z</i>, compute
+            <span class="GramE"><i>f(</i></span
+            ><i>z)</i>, test if <i>f(z) = x</i>, and then test if
+            <i>z &gt;= y</i>. If both tests are met, then we have established
+            that <i>f<span class="GramE">^{</span>-1}(x) &gt;= y</i>, so
+            <i>(<span class="SpellE">x,y</span>)</i> is in the complement
+            language.
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l2 level1 lfo6;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >Finally, we must show that the language is not in <b>P</b>. We can
+            show that if it were in <b>P</b>, then with <i>n</i> tests for
+            membership in the language, we could binary-search to find the exact
+            value of <i>f<span class="GramE">^{</span>-1}(x)</i>. If one test
+            takes time that is polynomial in <i>n</i>, then <i>n</i> times that
+            amount is also polynomial in <i>n</i>. Start by testing the pair
+            <i>(x,2^{n-1})</i>, i.e., the rough midpoint in the range of
+            <i>n</i>-bit integers. If the answer is ``yes,'' next test
+            <i>(x<span class="GramE">,2</span>^{n-2})</i>; if the answer is
+            ``no,'' test <i>(x,3*2^{n-2})</i> next. In this manner, we can
+            establish one bit of <i>f<span class="GramE">^{</span>-1}(x)</i> at
+            each test, and after <i>n</i> tests, we know
+            <i>f^{-1}(x)</i> exactly.
+          </span>
+        </li>
+      </ol>
+
+      <p style="margin-left: 36pt">
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+
+      <h2 style="margin-left: 36pt">
+        <a name="sol113"></a
+        ><span lang="EN-US">Solutions for Section 11.3</span>
+      </h2>
+
+      <h3 style="margin-left: 36pt">
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >11.3.2</st1:chsdate
+          ></span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          mso-margin-top-alt: auto;
+          mso-margin-bottom-alt: auto;
+          margin-left: 36pt;
+        "
+      >
+        <span lang="EN-US"
+          >Suppose <i>M</i> is a TM with polynomial space bound
+          <span class="GramE"><i>p(</i></span
+          ><i>n)</i>, and <i>w</i> is an input to <i>M</i> of length <i>n</i>.
+          We must show how to take <i>M</i> and <i>w</i>, and write down, in
+          polynomial time, a regular expression <i>E</i> that is Sigma* if and
+          only if <i>M</i> does not accept <i>w</i>.
+        </span>
+      </p>
+
+      <p style="margin-left: 36pt">
+        <span lang="EN-US"
+          >Technically, this construction reduces <i>L(M)</i> to the complement
+          of the set in question, that is, to the set of regular expressions
+          that are not equivalent to Sigma*. However, an easy consequence of
+          Theorem 11.4 is that, since a deterministic, polynomial-time TM can be
+          made to halt, <b>PS</b> is closed under complementation; just change
+          the accepting states to halting, but
+          <span class="SpellE">nonaccepting</span> states, add an accepting
+          state, and make every halting,
+          <span class="SpellE">nonaccepting</span> state transfer to that
+          accepting state instead of halting immediately. Thus, we could assume
+          that <i>M</i> is actually a TM for the complement of the language
+          <i>L</i> in <b>PS</b> in question. Then, we are actually reducing
+          <i>L</i> to the language of regular expressions equivalent to Sigma*,
+          as requested.
+        </span>
+      </p>
+
+      <p style="margin-left: 36pt">
+        <span lang="EN-US"
+          >To construct regular expression <i>E</i>, we shall write
+          <i>E = F + G + H</i>, where the three
+          <span class="SpellE">subexpressions</span> <i>E, F</i>, and
+          <i>H</i> define sequences of <span class="SpellE">ID's</span> of
+          <i>M</i> that do not ``start right,'' ``move right,'' and ``finish
+          right,'' respectively. Think of an accepting computation of
+          <i>M</i> as a sequence of symbols that are the concatenation of
+          <span class="SpellE">ID's</span> of <i>M</i>, each
+          <span class="SpellE">preceeded</span> by a special marker symbol #.
+          The alphabet Sigma for <i>E</i> will be # plus all the tape and state
+          symbols of <i>M</i>, which we can assume without loss of
+          <span class="GramE">generality</span> are disjoint. Each ID is exactly
+          <i>p(n)+1</i> symbols long, since it includes the state and exactly
+          <i>p(n)</i> tape symbols, even if many at the end are blank.
+        </span>
+      </p>
+
+      <ol start="3" type="1">
+        <ol start="1" type="1">
+          <li
+            class="MsoNormal"
+            style="
+              mso-margin-top-alt: auto;
+              mso-margin-bottom-alt: auto;
+              mso-list: l2 level2 lfo6;
+              tab-stops: list 72pt;
+            "
+          >
+            <i><span lang="EN-US">H</span></i
+            ><span lang="EN-US"
+              >: Finishes wrong. <i>M</i> fails to accept if the sequence has no
+              accepting ID. Thus, let
+              <i
+                >H = (Sigma -
+                <span class="SpellE"><span class="GramE">Qf</span></span
+                >)*</i
+              >, where <span class="SpellE"><i>Qf</i></span> is the set of
+              accepting states of <i>M</i>.
+            </span>
+          </li>
+          <li
+            class="MsoNormal"
+            style="
+              mso-margin-top-alt: auto;
+              mso-margin-bottom-alt: auto;
+              mso-list: l2 level2 lfo6;
+              tab-stops: list 72pt;
+            "
+          >
+            <i><span lang="EN-US">F</span></i
+            ><span lang="EN-US"
+              >: Starts wrong. Any string in which the first
+              <span class="GramE"><i>p(</i></span
+              ><i>n)+2</i> symbols are not #, <i>q_0</i> (the start state),
+              <i>w</i>, and <i>p(n) - n</i> blanks, is not the beginning of an
+              accepting computation, and so should be in <i>L(E)</i>. We can
+              write <i>F</i> as the sum of the terms:
+            </span>
+          </li>
+          <ul type="square">
+            <li
+              class="MsoNormal"
+              style="
+                mso-margin-top-alt: auto;
+                mso-margin-bottom-alt: auto;
+                mso-list: l2 level3 lfo6;
+                tab-stops: list 108pt;
+              "
+            >
+              <i><span lang="EN-US">(Sigma-{#})Sigma*</span></i
+              ><span lang="EN-US"
+                >, i.e., all strings that do not begin with #.
+              </span>
+            </li>
+            <li
+              class="MsoNormal"
+              style="
+                mso-margin-top-alt: auto;
+                mso-margin-bottom-alt: auto;
+                mso-list: l2 level3 lfo6;
+                tab-stops: list 108pt;
+              "
+            >
+              <span class="GramE"
+                ><i><span lang="EN-US">Sigma(</span></i></span
+              ><i><span lang="EN-US">Sigma-{q_0})Sigma*</span></i
+              ><span lang="EN-US"
+                >, i.e., all strings that do not have <i>q_0</i> as their second
+                symbol.
+              </span>
+            </li>
+            <li
+              class="MsoNormal"
+              style="
+                mso-margin-top-alt: auto;
+                mso-margin-bottom-alt: auto;
+                mso-list: l2 level3 lfo6;
+                tab-stops: list 108pt;
+              "
+            >
+              <i
+                ><span lang="EN-US"
+                  >Sigma<span class="GramE">^{</span>i+1}(Sigma-{<span
+                    class="SpellE"
+                    >a_i</span
+                  >})Sigma*</span
+                ></i
+              ><span lang="EN-US"
+                >, where <span class="SpellE"><i>a_i</i></span> is the
+                <span class="SpellE"><i>i</i>th</span> position of <i>w</i>.
+                Note <span class="SpellE"><i>Sigma^k</i></span> stands for Sigma
+                written <i>k</i> times, but this expression takes only
+                polynomial time to write.
+              </span>
+            </li>
+            <li
+              class="MsoNormal"
+              style="
+                mso-margin-top-alt: auto;
+                mso-margin-bottom-alt: auto;
+                mso-list: l2 level3 lfo6;
+                tab-stops: list 108pt;
+              "
+            >
+              <i
+                ><span lang="PT-BR" style="mso-ansi-language: PT-BR"
+                  >Sigma^{i}(Sigma-{B})Sigma*</span
+                ></i
+              ><span lang="PT-BR" style="mso-ansi-language: PT-BR"
+                >, for all <i>n+3 &lt;= i &lt;= p(n)+1</i>. </span
+              ><span lang="EN-US"
+                >Here, <i>B</i> represents the blank, and this expression covers
+                all strings that fail to have a blank where the first ID must
+                have one. Note that these terms require us to write Sigma as
+                many as <span class="GramE"><i>p(</i></span
+                ><i>n)+1</i> times, but that still takes only polynomial time.
+                Also, there are <span class="SpellE">polynomially</span> many
+                terms, so the total work is polynomial.
+              </span>
+            </li>
+            <li
+              class="MsoNormal"
+              style="
+                mso-margin-top-alt: auto;
+                mso-margin-bottom-alt: auto;
+                mso-list: l2 level3 lfo6;
+                tab-stops: list 108pt;
+              "
+            >
+              <i
+                ><span lang="EN-US"
+                  >(Sigma + epsilon)<span class="GramE">^{</span>p(n)+1}</span
+                ></i
+              ><span lang="EN-US"
+                >. This term covers all strings that are shorter than
+                <span class="GramE"><i>p(</i></span
+                ><i>n)+2</i> symbols, and therefore cannot have an initial ID,
+                regardless of the symbols found there. As in the previous set of
+                terms, the time taken to write this term is large, but
+                polynomial.
+              </span>
+            </li>
+          </ul>
+          <li
+            class="MsoNormal"
+            style="
+              mso-margin-top-alt: auto;
+              mso-margin-bottom-alt: auto;
+              mso-list: l2 level2 lfo6;
+              tab-stops: list 72pt;
+            "
+          >
+            <i><span lang="EN-US">G</span></i
+            ><span lang="EN-US"
+              >: moves wrong. We need to capture all strings that have some
+              point at which symbols separated by distance roughly
+              <i>p(n)</i> do not reflect a move of <i>M</i>. The idea is similar
+              to that used in Cook's theorem (Theorem 10.9). Each position of an
+              ID is determined by the symbol at that position in the previous ID
+              and the two neighboring positions. Thus, <i>G</i> is the sum of
+              terms
+              <i
+                >(Sigma*<span class="GramE">)UVW</span
+                >(Sigma^{p(n)})X(Sigma*)</i
+              >, where <i>U, V, W, X</i> are four symbols of Sigma such that if
+              <i>UVW</i> were three consecutive symbols of an ID of <i>M</i> (<i
+                >U</i
+              >
+              may be # if the ID is just beginning, and <i>W</i> may be # if the
+              ID is ending), then <i>X</i> would <b>not</b> be the symbol in the
+              same position as <i>V</i> in the next ID. For example, if none of
+              <i>U, V, W</i> are a state, then <i>X</i> could be any symbol but
+              <i>V</i>. Again, we can write this large expression in polynomial
+              time, even though it requires us to write Sigma
+              <span class="GramE"><i>p(</i></span
+              ><i>n)</i> times.
+            </span>
+          </li>
+        </ol>
+      </ol>
+
+      <p
+        class="MsoNormal"
+        style="
+          mso-margin-top-alt: auto;
+          mso-margin-bottom-alt: auto;
+          margin-left: 36pt;
+        "
+      >
+        <span lang="EN-US"
+          >If <i>M</i> accepts <i>w</i>, then there is some accepting
+          computation, and the string representing that computation fails to
+          match any of the regular expressions described above. Thus,
+          <span class="GramE"><i>E !</i></span
+          ><i>= Sigma*</i>. However, any string that is not an accepting
+          computation of <i>M</i> on <i>w</i> will surely fail meet one of the
+          conditions ``starts wrong,'' ``moves wrong,'' or ``finished wrong,''
+          and therefore will be in <span class="GramE"><i>L(</i></span
+          ><i>E)</i>. Thus, if <i>M</i> does not accept <i>w</i>, then
+          <i>E = Sigma*</i>.
+        </span>
+      </p>
+
+      <p style="margin-left: 36pt">
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+
+      <h2 style="margin-left: 36pt">
+        <a name="sol115"></a
+        ><span lang="EN-US">Solutions for Section 11.5</span>
+      </h2>
+
+      <h3 style="margin-left: 36pt">
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >11.5.1</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          mso-margin-top-alt: auto;
+          mso-margin-bottom-alt: auto;
+          margin-left: 36pt;
+        "
+      >
+        <span lang="EN-US"
+          >A simple way to <span class="SpellE">to</span> observe that 9 - 11 =
+          -2, and -2 modulo 13 is 11, since 13 -2 = 11. Or, we may treat the
+          subtraction as addition of a negative number, say that -11 modulo 13
+          is 2, and 9 + 2 modulo 13 is 11.
+        </span>
+      </p>
+
+      <h3 style="margin-left: 36pt">
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >11.5.1</st1:chsdate
+          >(c)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          mso-margin-top-alt: auto;
+          mso-margin-bottom-alt: auto;
+          margin-left: 36pt;
+        "
+      >
+        <span lang="EN-US"
+          >We need to compute the inverse of 8 modulo 13. Exploring the
+          possibilities, from 2 to 12, we find that 8*5 = 40, which is 1 modulo
+          13. Thus, 1/8 = 5 modulo 13, and 5/8 = 5*5 = 25 = 12 modulo 13. Thus,
+          5/8 = 12.
+        </span>
+      </p>
+
+      <h3 style="margin-left: 36pt">
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >11.5.3</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p
+        class="MsoNormal"
+        style="
+          mso-margin-top-alt: auto;
+          mso-margin-bottom-alt: auto;
+          margin-left: 36pt;
+        "
+      >
+        <span lang="EN-US"
+          >From the table of Fig. 11.9, we see that 2*2 = 4, 3*3 = 2, 4*4 = 2,
+          5*5 = 4, and 6*6 = 1. We also know that 1*1 = 1. Thus, 1, 2, and 4 are
+          the quadratic residues modulo 7.
+        </span>
+      </p>
+
+      <p style="text-indent: 36pt; mso-char-indent-count: 3">
+        <span lang="EN-US"
+          ><a href="solutions.htm">Return to Home</a><i><o:p></o:p></i
+        ></span>
+      </p>
+
+      <p style="margin-left: 36pt">
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+    </div>
+  </body>
+</html>

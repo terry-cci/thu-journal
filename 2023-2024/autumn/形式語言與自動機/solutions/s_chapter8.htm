@@ -1,0 +1,1267 @@
+<html
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:w="urn:schemas-microsoft-com:office:word"
+  xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+  xmlns="http://www.w3.org/TR/REC-html40"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="ProgId" content="Word.Document" />
+    <meta name="Generator" content="Microsoft Word 11" />
+    <meta name="Originator" content="Microsoft Word 11" />
+    <link rel="File-List" href="s_chapter8.files/filelist.xml" />
+    <title>
+      Introduction to Automata Theory, Languages, and Computation: Solutions for
+      Chapter 8
+    </title>
+    <o:SmartTagType
+      namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+      name="chmetcnv"
+    />
+    <o:SmartTagType
+      namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+      name="chsdate"
+    />
+    <!--[if gte mso 9
+      ]><xml>
+        <o:DocumentProperties>
+          <o:Author>wang</o:Author>
+          <o:Template>Normal</o:Template>
+          <o:LastAuthor>wangshengyuan</o:LastAuthor>
+          <o:Revision>7</o:Revision>
+          <o:TotalTime>4</o:TotalTime>
+          <o:Created>2002-01-23T01:45:00Z</o:Created>
+          <o:LastSaved>2011-11-19T08:16:00Z</o:LastSaved>
+          <o:Pages>4</o:Pages>
+          <o:Words>1415</o:Words>
+          <o:Characters>8071</o:Characters>
+          <o:Company>wyy</o:Company>
+          <o:Lines>67</o:Lines>
+          <o:Paragraphs>18</o:Paragraphs>
+          <o:CharactersWithSpaces>9468</o:CharactersWithSpaces>
+          <o:Version>11.9999</o:Version>
+        </o:DocumentProperties>
+      </xml><!
+    [endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <w:WordDocument>
+          <w:SpellingState>Clean</w:SpellingState>
+          <w:GrammarState>Clean</w:GrammarState>
+          <w:DrawingGridVerticalSpacing>7.8 ��</w:DrawingGridVerticalSpacing>
+          <w:ValidateAgainstSchemas />
+          <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+          <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+          <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+          <w:Compatibility>
+            <w:UseFELayout />
+          </w:Compatibility>
+          <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+        </w:WordDocument>
+      </xml><!
+    [endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+        </w:LatentStyles> </xml
+    ><![endif]-->
+    <!--[if !mso
+      ]><object
+        classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D"
+        id="ieooui"
+      ></object>
+      <style>
+        st1\:* {
+          behavior: url(#ieooui);
+        }
+      </style>
+    <![endif]-->
+    <style>
+      <!--
+       /* Font Definitions */
+       @font-face
+      	{font-family: "Cambria Math";
+      	panose-1:2 1 6 0 3 1 1 1 1 1;
+      	mso-font-alt:SimSun;
+      	mso-font-charset:134;
+      	mso-generic-font-family:auto;
+      	mso-font-pitch:variable;
+      	mso-font-signature:3 135135232 16 0 262145 0;}
+      @font-face
+      	{font-family:"Cambria Math";
+      	panose-1:2 1 6 0 3 1 1 1 1 1;
+      	mso-font-charset:134;
+      	mso-generic-font-family:auto;
+      	mso-font-pitch:variable;
+      	mso-font-signature:3 135135232 16 0 262145 0;}
+       /* Style Definitions */
+       p.MsoNormal, li.MsoNormal, div.MsoNormal
+      	{mso-style-parent:"";
+      	margin:0cm;
+      	margin-bottom:.0001pt;
+      	mso-pagination:widow-orphan;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Geneva";}
+      a:link, span.MsoHyperlink
+      	{color:blue;
+      	text-decoration:underline;
+      	text-underline:single;}
+      a:visited, span.MsoHyperlinkFollowed
+      	{color:blue;
+      	text-decoration:underline;
+      	text-underline:single;}
+      p
+      	{mso-margin-top-alt:auto;
+      	margin-right:0cm;
+      	mso-margin-bottom-alt:auto;
+      	margin-left:0cm;
+      	mso-pagination:widow-orphan;
+      	font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-bidi-font-family:"Geneva";}
+      tt
+      	{mso-ansi-font-size:12.0pt;
+      	mso-bidi-font-size:12.0pt;
+      	font-family: "Cambria Math";
+      	mso-ascii-font-family: "Cambria Math";
+      	mso-fareast-font-family: "Cambria Math";
+      	mso-hansi-font-family: "Cambria Math";
+      	mso-bidi-font-family:"Courier New";}
+      span.SpellE
+      	{mso-style-name:"";
+      	mso-spl-e:yes;}
+      span.GramE
+      	{mso-style-name:"";
+      	mso-gram-e:yes;}
+       /* Page Definitions */
+       @page
+      	{mso-page-border-surround-header:no;
+      	mso-page-border-surround-footer:no;}
+      @page Section1
+      	{size:595.3pt 841.9pt;
+      	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+      	mso-header-margin:42.55pt;
+      	mso-footer-margin:49.6pt;
+      	mso-paper-source:0;}
+      div.Section1
+      	{page:Section1;}
+       /* List Definitions */
+       @list l0
+      	{mso-list-id:1483228304;
+      	mso-list-type:hybrid;
+      	mso-list-template-ids:580661364 1424545932 332032998 -787953382 1817372086 1015975326 1280846076 -1003876306 57297798 -1403495136;}
+      @list l0:level1
+      	{mso-level-tab-stop:36.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level2
+      	{mso-level-tab-stop:72.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level3
+      	{mso-level-tab-stop:108.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level4
+      	{mso-level-tab-stop:144.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level5
+      	{mso-level-tab-stop:180.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level6
+      	{mso-level-tab-stop:216.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level7
+      	{mso-level-tab-stop:252.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level8
+      	{mso-level-tab-stop:288.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l0:level9
+      	{mso-level-tab-stop:324.0pt;
+      	mso-level-number-position:left;
+      	text-indent:-18.0pt;}
+      @list l1
+      	{mso-list-id:1918399025;
+      	mso-list-template-ids:1207841784;}
+      ol
+      	{margin-bottom:0cm;}
+      ul
+      	{margin-bottom:0cm;}
+      -->
+    </style>
+    <!--[if gte mso 10]>
+      <style>
+        /* Style Definitions */
+        table.MsoNormalTable {
+          mso-style-name: ��ͨCambria Math;
+          mso-tstyle-rowband-size: 0;
+          mso-tstyle-colband-size: 0;
+          mso-style-noshow: yes;
+          mso-style-parent: "";
+          mso-padding-alt: 0cm 5.4pt 0cm 5.4pt;
+          mso-para-margin: 0cm;
+          mso-para-margin-bottom: 0.0001pt;
+          mso-pagination: widow-orphan;
+          font-size: 10pt;
+          font-family: "Geneva";
+          mso-fareast-font-family: "Geneva";
+          mso-ansi-language: #0400;
+          mso-fareast-language: #0400;
+          mso-bidi-language: #0400;
+        }
+      </style>
+    <![endif]-->
+    <!--[if gte mso 9
+      ]><xml> <o:shapedefaults v:ext="edit" spidmax="1026" /> </xml
+    ><![endif]-->
+    <!--[if gte mso 9
+      ]><xml>
+        <o:shapelayout v:ext="edit">
+          <o:idmap v:ext="edit" data="1" /> </o:shapelayout></xml
+    ><![endif]-->
+  </head>
+
+  <body
+    bgcolor="black"
+    lang="ZH-CN"
+    link="blue"
+    vlink="blue"
+    text="white"
+    style="tab-interval: 21pt"
+  >
+    <div class="Section1">
+      <div align="center">
+        <table
+          class="MsoNormalTable"
+          border="0"
+          cellpadding="0"
+          style="mso-cellspacing: 1.5pt; mso-padding-alt: 0cm 0cm 0cm 0cm"
+        >
+          <tr
+            style="
+              mso-yfti-irow: 0;
+              mso-yfti-firstrow: yes;
+              mso-yfti-lastrow: yes;
+            "
+          >
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal">
+                <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <span lang="EN-US" style="font-size: 24pt"
+                  >Introduction to Automata Theory, Languages, and
+                  Computation</span
+                ><span lang="EN-US"> </span>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <h2 align="center" style="text-align: center">
+        <a name="top"></a><span lang="EN-US">Solutions for Chapter 8</span>
+      </h2>
+
+      <p>
+        <span lang="EN-US"><span style="mso-spacerun: yes">&nbsp;</span></span>
+      </p>
+
+      <h2>
+        <a name="sol81"></a><span lang="EN-US">Solutions for Section 8.1</span>
+      </h2>
+
+      <h3>
+        <span lang="EN-US"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >8.1.1</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <span lang="EN-US"
+          >We need to take a program <i>P</i> and modify it so it:
+        </span>
+      </p>
+
+      <ol start="1" type="1">
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l0 level1 lfo3;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US"
+            >Never halts unless we explicitly want it to, and
+          </span>
+        </li>
+        <li
+          class="MsoNormal"
+          style="
+            mso-margin-top-alt: auto;
+            mso-margin-bottom-alt: auto;
+            mso-list: l0 level1 lfo3;
+            tab-stops: list 36pt;
+          "
+        >
+          <span lang="EN-US">Halts whenever it prints </span
+          ><tt><span lang="EN-US">hello, world.</span></tt
+          ><span lang="EN-US"> </span>
+        </li>
+      </ol>
+
+      <p>
+        <span lang="EN-US">For (1), we can add a loop such as </span
+        ><span class="GramE"
+          ><tt><span lang="EN-US">while(</span></tt></span
+        ><tt><span lang="EN-US">1){x=x;}</span></tt
+        ><span lang="EN-US"> to the end of </span
+        ><tt
+          ><span lang="EN-US"
+            >main, and also at any point where main returns. That change catches
+            the normal ways a program can halt, although it doesn't address the
+            problem of a program that halts because some exception such as
+            division by 0 or an attempt to read an unavailable device.
+            Technically, we'd have to replace all of the exception handlers in
+            the run-time environment to cause a loop whenever an exception
+            occurred. <o:p></o:p></span
+        ></tt>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >For (2), we modify <i>P</i> to record in an array the first 12
+          characters printed. If we find that they are
+          <tt
+            >hello, <span class="GramE">world.,</span> we halt by going to the
+            end of main</tt
+          >
+          (past the point where the while-loop has been installed).
+        </span>
+      </p>
+
+      <h2>
+        <a name="sol82"></a
+        ><span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Solutions for Section 8.2<o:p></o:p
+        ></span>
+      </h2>
+
+      <h3>
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >8.2.1</st1:chsdate
+          >(a)<o:p></o:p
+        ></span>
+      </h3>
+
+      <p class="MsoNormal">
+        <tt
+          ><span lang="EN-US"
+            >To make the <span class="SpellE">ID's</span> clearer in HTML, we'll
+            use <i>[q0]</i> for <i>q_0</i>, and similarly for the other states.
+            <o:p></o:p></span
+        ></tt>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <i
+          ><span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+            >[q0]00 |- <span class="GramE">X[</span>q1]0 |- X0[q1]</span
+          ></i
+        ><span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"> </span>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >The TM halts at the above ID. <o:p></o:p
+        ></span>
+      </p>
+
+      <h3>
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >8.2.2</st1:chsdate
+          >(a)<o:p></o:p
+        ></span>
+      </h3>
+
+      <p class="MsoNormal">
+        <tt
+          ><span lang="EN-US"
+            >Here is the transition table for the TM: <o:p></o:p></span
+        ></tt>
+      </p>
+
+      <div align="center">
+        <table
+          class="MsoNormalTable"
+          border="1"
+          cellpadding="0"
+          style="
+            mso-cellspacing: 1.5pt;
+            border: outset 4.5pt;
+            mso-padding-alt: 0cm 0cm 0cm 0cm;
+          "
+        >
+          <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <b
+                  ><span lang="EN-US">state <o:p></o:p></span
+                ></b>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <b
+                  ><span lang="EN-US">0 <o:p></o:p></span
+                ></b>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <b
+                  ><span lang="EN-US">1 <o:p></o:p></span
+                ></b>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <b
+                  ><span lang="EN-US">B <o:p></o:p></span
+                ></b>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <b
+                  ><span lang="EN-US">X <o:p></o:p></span
+                ></b>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <b
+                  ><span lang="EN-US">Y<o:p></o:p></span
+                ></b>
+              </p>
+            </td>
+          </tr>
+          <tr style="mso-yfti-irow: 1">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">q0 </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q2,X,R) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q1,X,R) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal">
+                <span lang="EN-US">(<span class="SpellE">qf,B,R</span>) </span>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">- </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q0,Y,R)</span></p>
+            </td>
+          </tr>
+          <tr style="mso-yfti-irow: 2">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">q1 </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q3,Y,L) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q1,1,R) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">- </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">- </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q1,Y,R)</span></p>
+            </td>
+          </tr>
+          <tr style="mso-yfti-irow: 3">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">q2 </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q2,0,R) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q3,Y,L) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">- </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">- </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q2,Y,R)</span></p>
+            </td>
+          </tr>
+          <tr style="mso-yfti-irow: 4">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">q3 </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q3,0,L) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q3,1,L) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">- </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q0,X,R) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q3,Y,L)</span></p>
+            </td>
+          </tr>
+          <tr style="mso-yfti-irow: 5; mso-yfti-lastrow: yes">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal">
+                <span class="SpellE"><span lang="EN-US">qf</span></span
+                ><span lang="EN-US"> </span>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">- </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">- </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">- </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">- </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">-</span></p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >In explanation, the TM makes repeated excursions back and forth along
+          the tape. The symbols <i>X</i> and <i>Y</i> are used to replace 0's
+          and 1's that have been cancelled one against another. The difference
+          is that an <i>X</i> guarantees that there are no unmatched 0's and 1's
+          to its left (so the head never moves left of an <i>X</i>), while a
+          <i>Y</i> may have 0's or 1's to its left. <o:p></o:p
+        ></span>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Initially in state <i>q0</i>, the TM picks up a 0 or 1, remembering
+          it in its state (<i>q1</i> = found a 1; <i>q2</i> = found a 0), and
+          cancels what it found with an <i>X</i>. As an exception, if the TM
+          sees the blank in state <i>q0</i>, then all 0's and 1's have matched,
+          so the input is accepted by going to state
+          <span class="SpellE"
+            ><span class="GramE"><i>qf</i></span></span
+          >. <o:p></o:p
+        ></span>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >In state <i>q1</i>, the TM moves right, looking for a 0. If it finds
+          it, the 0 is replaced by <i>Y</i>, and the TM enters state
+          <i>q3</i> to move left <span class="GramE">an</span> look for an
+          <i>X</i>. Similarly, state <i>q2</i> looks for a 1 to match against a
+          0. <o:p></o:p
+        ></span>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >In state <i>q3</i>, the TM moves left until it finds the rightmost
+          <i>X</i>. At that point, it enters state <i>q0</i>
+          <span class="GramE">again,</span> moving right over <i>Y</i>'s until
+          it finds a 0, 1, or blank, and the cycle begins again. <o:p></o:p
+        ></span>
+      </p>
+
+      <h3>
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >8.2.4</st1:chsdate
+          ><o:p></o:p
+        ></span>
+      </h3>
+
+      <p class="MsoNormal">
+        <tt
+          ><span lang="EN-US"
+            >These constructions, while they can be carried out using the basic
+            model of a TM are much clearer if we use some of the tricks of Sect.
+            8.3. <o:p></o:p></span
+        ></tt>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >For part (a), given an input
+          <i
+            >[<span class="SpellE">x<span class="GramE">,y</span></span
+            >]</i
+          >
+          use a second track to simulate the TM for <i>f</i> on the input
+          <i>x</i>. When the TM halts, compare what it has written with
+          <i>y</i>, to see if <i>y</i> is indeed <i>f(x)</i>. Accept if so.
+        </span>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >For part (b), given <i>x</i> on the tape, we need to simulate the TM
+          <i>M</i> that recognizes the graph of <i>f</i>. However, since this TM
+          may not halt on some inputs, we cannot simply try all
+          <i
+            >[<span class="SpellE">x<span class="GramE">,i</span></span
+            >}</i
+          >
+          to see which value of <span class="SpellE"><i>i</i></span> leads to
+          acceptance by <i>M</i>. The reason is that, should we work on some
+          value of <span class="SpellE"><i>i</i></span> for which <i>M</i> does
+          not halt, we'll never advance to the correct value of <i>f(x)</i>.
+          Rather, we consider, for various combinations of
+          <span class="SpellE"><i>i</i></span> and <i>j</i>, whether
+          <i>M</i> accepts
+          <i
+            >[<span class="SpellE">x<span class="GramE">,i</span></span
+            >]</i
+          >
+          in <i>j</i> steps. If we consider
+          <i>(<span class="SpellE">i,j</span>)</i> pairs in order of their sum
+          (i.e., (0,1), (1,0), (0,2), (1,1), (2,0), (0,3),...) then eventually
+          we shall simulate <i>M</i> on
+          <i>[<span class="SpellE">x,f</span>(x)]</i> for a sufficient number of
+          steps that <i>M</i> reaches acceptance. We need only wait until we
+          consider pairs whose sum is <i>f(x)</i> plus however many steps it
+          takes <i>M</i> to accept <i>[<span class="SpellE">x,f</span>(x)]</i>.
+          In this manner, we can discover what <i>f(x)</i> is, write it on the
+          tape of the TM that we have designed to compute <i>f(x)</i>, and halt.
+          <o:p></o:p
+        ></span>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Now let us consider what happens if <i>f</i> is not defined for some
+          arguments. Part (b) does not change, although the constructed TM will
+          fail to discover <i>f(x)</i> and thus will continue searching forever.
+          For part (a), if we are given
+          <i
+            >[<span class="SpellE">x<span class="GramE">,y</span></span
+            >]</i
+          >, and <i>f</i> is not defined on <i>x</i>, then the TM for
+          <i>f</i> will never halt on <i>x</i>. However, there is nothing wrong
+          with that. Since <i>f(x)</i> is undefined, surely <i>y</i> is not
+          <i>f(x)</i>. Thus, we do not want the TM for the graph of <i>f</i> to
+          accept
+          <i
+            >[<span class="SpellE">x<span class="GramE">,y</span></span
+            >]</i
+          >
+          anyway. <o:p></o:p
+        ></span>
+      </p>
+
+      <h3>
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >8.2.5</st1:chsdate
+          >(a)<o:p></o:p
+        ></span>
+      </h3>
+
+      <p class="MsoNormal">
+        <tt
+          ><span lang="EN-US"
+            >This TM only moves right on its input. Moreover, it can only move
+            right if it sees alternating 010101...
+            <span class="GramE">on</span> the input tape. Further, it alternates
+            between states <i>q_0</i> and <i>q_1</i> and only accepts if it sees
+            a blank in state <i>q_1</i>. That in turn occurs if it has just seen
+            0 and moved right, so the input must end in a 0. That is, the
+            language is that of regular expression <b>(01)*0</b>.
+            <o:p></o:p></span
+        ></tt>
+      </p>
+
+      <h2>
+        <a name="sol83"></a
+        ><span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Solutions for Section 8.3</span
+        >
+      </h2>
+
+      <p class="MsoNormal">
+        <tt
+          ><span lang="EN-US"
+            >Here is the subroutine. Note that because of the technical
+            requirements of the subroutine, and the fact that a TM is not
+            allowed to keep its head stationary, when we see a non-0, we must
+            enter state <i>q3</i>, move right, and then come back left in state
+            <i>q4</i>, which is the ending state for the subroutine.
+            <o:p></o:p></span
+        ></tt>
+      </p>
+
+      <div align="center">
+        <table
+          class="MsoNormalTable"
+          border="1"
+          cellpadding="0"
+          style="
+            mso-cellspacing: 1.5pt;
+            border: outset 4.5pt;
+            mso-padding-alt: 0cm 0cm 0cm 0cm;
+          "
+        >
+          <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <b
+                  ><span lang="EN-US">state <o:p></o:p></span
+                ></b>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <b
+                  ><span lang="EN-US">0 <o:p></o:p></span
+                ></b>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <b
+                  ><span lang="EN-US">1 <o:p></o:p></span
+                ></b>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <b
+                  ><span lang="EN-US">B<o:p></o:p></span
+                ></b>
+              </p>
+            </td>
+          </tr>
+          <tr style="mso-yfti-irow: 1">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">q1 </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q2,0,R) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">- </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">-</span></p>
+            </td>
+          </tr>
+          <tr style="mso-yfti-irow: 2">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">q2 </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q2,0,R) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q3,1,R) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q3,B,R)</span></p>
+            </td>
+          </tr>
+          <tr style="mso-yfti-irow: 3; mso-yfti-lastrow: yes">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">q3 </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q4,0,L) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q4,1,L) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q4,B,L)</span></p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Now, we can use this subroutine in a TM that starts in state
+          <i>q0</i>. If this TM ever sees the blank, it accepts in state
+          <span class="SpellE"
+            ><span class="GramE"><i>qf</i></span></span
+          >. However, whenever it is in state <i>q0</i>, it knows only that it
+          has not seen a 1 immediately to its right. If it is scanning a 0, it
+          must check (in state <i>q5</i>) that it does not have a blank
+          immediately to its right; if it does, it accepts. If it sees
+          <st1:chmetcnv
+            TCSC="0"
+            NumberType="1"
+            Negative="False"
+            HasSpace="True"
+            SourceValue="0"
+            UnitName="in"
+            w:st="on"
+            >0 in</st1:chmetcnv
+          >
+          state <i>q5</i>, it comes back to the previous 0 and calls the
+          subroutine to skip to the next non-0. If it sees
+          <st1:chmetcnv
+            TCSC="0"
+            NumberType="1"
+            Negative="False"
+            HasSpace="True"
+            SourceValue="1"
+            UnitName="in"
+            w:st="on"
+            >1 in</st1:chmetcnv
+          >
+          state <i>q5</i>, then it has seen 01, and uses state <i>q6</i> to
+          check that it doesn't have another 1 to the right. <o:p></o:p
+        ></span>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >In addition, the TM in state <i>q4</i> (the final state of the
+          subroutine), accepts if it has reached a blank, and if it has reached
+          a 1 enters state <i>q6</i> to make sure there is a 0 or blank
+          following. Note that states <i>q4</i> and <i>q5</i> are really the
+          same, except that in <i>q4</i> we are certain we are not scanning a 0.
+          They could be combined into one state. Notice also that the subroutine
+          is not a perfect match for what is needed, and there is some
+          unnecessary jumping back and forth on the tape. Here is the remainder
+          of the transition table. <o:p></o:p
+        ></span>
+      </p>
+
+      <div align="center">
+        <table
+          class="MsoNormalTable"
+          border="1"
+          cellpadding="0"
+          style="
+            mso-cellspacing: 1.5pt;
+            border: outset 4.5pt;
+            mso-padding-alt: 0cm 0cm 0cm 0cm;
+          "
+        >
+          <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <b
+                  ><span lang="EN-US">state <o:p></o:p></span
+                ></b>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <b
+                  ><span lang="EN-US">0 <o:p></o:p></span
+                ></b>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <b
+                  ><span lang="EN-US">1 <o:p></o:p></span
+                ></b>
+              </p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal" align="center" style="text-align: center">
+                <b
+                  ><span lang="EN-US">B<o:p></o:p></span
+                ></b>
+              </p>
+            </td>
+          </tr>
+          <tr style="mso-yfti-irow: 1">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">q0 </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q5,0,R) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q5,1,R) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal">
+                <span lang="EN-US">(<span class="SpellE">qf,B,R</span>)</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="mso-yfti-irow: 2">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">q5 </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q1,0,L) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q6,1,R) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal">
+                <span lang="EN-US">(<span class="SpellE">qf,B,R</span>)</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="mso-yfti-irow: 3">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">q6 </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q0,0,R) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">- </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal">
+                <span lang="EN-US">(<span class="SpellE">qf,B,R</span>)</span>
+              </p>
+            </td>
+          </tr>
+          <tr style="mso-yfti-irow: 4; mso-yfti-lastrow: yes">
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">q4 </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">- </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal"><span lang="EN-US">(q6,1,R) </span></p>
+            </td>
+            <td style="padding: 0.75pt 0.75pt 0.75pt 0.75pt">
+              <p class="MsoNormal">
+                <span lang="EN-US">(<span class="SpellE">qf,B,R</span>)</span>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt; tab-stops: 119.25pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          ><o:p>&nbsp;</o:p></span
+        >
+      </p>
+
+      <h2>
+        <a name="sol84"></a
+        ><span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Solutions for Section 8.4<o:p></o:p
+        ></span>
+      </h2>
+
+      <h3>
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >8.4.2</st1:chsdate
+          >(a)<o:p></o:p
+        ></span>
+      </h3>
+
+      <p class="MsoNormal">
+        <tt
+          ><span lang="EN-US"
+            >For clarity, we put the state in square brackets below. Notice that
+            in this example, we never branch.
+            <i
+              >[q_0]01 |- 1[q_0]1 |- 10[q_1] |-
+              <span class="GramE">10B[</span>q_2]</i
+            >
+            <o:p></o:p></span
+        ></tt>
+      </p>
+
+      <h3>
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >8.4.3</st1:chsdate
+          >(a)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <tt
+          ><span lang="EN-US"
+            >We'll use a second tape, on which the guess <i>x</i> is stored.
+            Scan the input from left <span class="SpellE">yo</span> right, and
+            at each cell, guess whether to stay in the initial state (which does
+            the scanning) or go to a new state that copies the next 100 symbols
+            onto the second tape. The copying is done by a sequence of 100
+            <span class="GramE">state</span>, so exactly 100 symbols can be
+            placed on tape 2. <o:p></o:p></span
+        ></tt>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Once the copying is done, retract the head of tape 2 to the left end
+          of the 100 symbols. Then, continue moving right on tape 1, and at each
+          cell guess either to continue moving right or to guess that the second
+          copy of <i>x</i> begins. In the latter case, compare the next 100
+          symbols on tape 1 with the 100 symbols on tape 2. If they all match,
+          then move right on tape 1 and accept as soon as a blank is seen.
+        </span>
+      </p>
+
+      <h3>
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >8.4.5</st1:chsdate
+          ><o:p></o:p
+        ></span>
+      </h3>
+
+      <p class="MsoNormal">
+        <tt
+          ><span lang="EN-US"
+            >For part (a), guess whether to move left or right, entering one of
+            two different states, each responsible for moving in one direction.
+            Each of these states proceeds in its direction, left or right, and
+            if it sees a $ it enters state <i>p</i>.
+            <span class="GramE">Technically</span>, the head has to move off the
+            $, entering another state, and then move back to the $, entering
+            state <i>p</i> as it does so. <o:p></o:p></span
+        ></tt>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Part (b), doing the same thing deterministically, is trickier, since
+          we might start off in the wrong direction and travel forever, never
+          seeing the $. Thus, we have to oscillate, using left and right
+          <span class="SpellE">endmarkers</span> <i>X</i> and <i>Y</i>,
+          respectively, to mark how far we have traveled on a second track.
+          Start moving one cell left and leave the <i>X</i>. Then, move two
+          cells right and leave the <i>Y</i>. Repeatedly move left to the
+          <i>X</i>, move the <i>X</i> one more cell left, go right to the
+          <i>Y</i>, move it once cell right, and repeat.
+        </span>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Eventually, we shall see the $. At this time, we can move left or
+          right to the other <span class="SpellE">endmarker</span>, erase it,
+          move back to the end where the $ was found, erase the other
+          <span class="SpellE">endmarker</span>, and wind up at the $.
+          <o:p></o:p
+        ></span>
+      </p>
+
+      <h3>
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >8.4.8</st1:chsdate
+          >(a)<o:p></o:p
+        ></span>
+      </h3>
+
+      <p class="MsoNormal">
+        <tt
+          ><span lang="EN-US"
+            >There would be 10 tracks. Five of the tracks hold one of the
+            symbols from the tape alphabet, so there are 7^5 ways to select
+            these tracks. The other five tracks hold either <i>X</i> or blank,
+            so these tracks can be selected in 2^5 ways. The total number of
+            symbols is thus 7^5 * 2^5 = 537,824. <o:p></o:p></span
+        ></tt>
+      </p>
+
+      <h3>
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >8.4.8</st1:chsdate
+          >(b)</span
+        >
+      </h3>
+
+      <p class="MsoNormal">
+        <tt
+          ><span lang="EN-US"
+            >The number of symbols is the same. The five tracks with tape
+            symbols can still be chosen in 5^7 ways. The sixth track has to tell
+            which <span class="GramE">subset of the five tapes have</span> their
+            head at that position. There are 2^5 possible
+            <span class="GramE">subsets,</span> and therefore 32 symbols are
+            needed for the 6th track. Again the number of symbols is 7^5 * 2^5.
+            <o:p></o:p></span
+        ></tt>
+      </p>
+
+      <h2>
+        <a name="sol85"></a
+        ><span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Solutions for Section 8.5</span
+        >
+      </h2>
+
+      <h3>
+        <span lang="EN-US" style="mso-bidi-font-family: 'Courier New'"
+          >Exercise
+          <st1:chsdate
+            IsROCDate="False"
+            IsLunarDate="False"
+            Day="30"
+            Month="12"
+            Year="1899"
+            w:st="on"
+            >8.5.1</st1:chsdate
+          >(c)<o:p></o:p
+        ></span>
+      </h3>
+
+      <p class="MsoNormal">
+        <tt
+          ><span lang="EN-US"
+            >In principle, any language that is recursively enumerable can be
+            recognized by a 2-counter machine, but how do we design a
+            comprehensible answer for a particular case? As
+            <span class="GramE"
+              >the <span class="SpellE"><i>a</i>'s</span></span
+            >
+            are read, count them with both counters. Then, when
+            <span class="SpellE"><i>b</i>'s</span> enter, compare them with one
+            counter, and accept if they are the same. Continue accepting as long
+            as <span class="SpellE"><i>c</i>'s</span> enter. If the numbers of
+            <span class="SpellE"><i>a</i>'s</span> and
+            <span class="SpellE"><i>b</i>'s</span> differ, then compare the
+            second counter with the number of
+            <span class="SpellE"><i>c</i>'s</span>, and accept if they match.
+            <o:p></o:p></span
+        ></tt>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+
+      <p>
+        <span lang="EN-US"
+          ><a href="solutions.htm">Return to Home</a><i><o:p></o:p></i
+        ></span>
+      </p>
+
+      <p style="margin: 0cm; margin-bottom: 0.0001pt">
+        <span lang="EN-US"><o:p>&nbsp;</o:p></span>
+      </p>
+    </div>
+  </body>
+</html>
