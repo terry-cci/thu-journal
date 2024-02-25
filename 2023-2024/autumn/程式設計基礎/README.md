@@ -45,3 +45,7 @@ Refer to [the syllabus](程式設計基礎敎學大綱.docx)
 ## Comments
 
 - The first class spended time on introducing the history of the C language
+
+One may skip the entire course and take the exams only when having planty of programming knowledge. It is a good opportunity for you to practise your favourite game engine while others are writing in native windows code.
+
+The hardest problem of the exam stops at DP, very friendly to OI competitors.

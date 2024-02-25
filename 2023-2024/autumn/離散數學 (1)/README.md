@@ -46,3 +46,13 @@ See also: [敎學日曆](./Disc_Math_Calendar_2023.pdf)
 - 參考書
   - Discrete Mathematics and Its Applications, 5th edition, K.Rosen
   - 屈婉玲, 耿素雲, 張立昂, 離散數學
+
+## Comments
+
+I got 3.6 on this subject, which has satisfied me. One is always flooded with definitions and properties in the later part of the course, but it is interesting to learn the concepts about relations and sets, most of which was met again in the FL&A course I took in the same semester.
+
+I was not able to complete the full exam paper since I was not so familiar with the overwhelming amount of types of problems to be memorised, but still turned out to have got good results after the forceful curving of our grades lul.
+
+It is normal to reach ~75 pts in the exam ~~(according to tinjyu, since he got approximately the score as well)~~ it is enough for those who are aiming for 3.6.
+
+Panic not, quite a part of the subject is very straightforward, just try to relate them with examples and you will better understand them.

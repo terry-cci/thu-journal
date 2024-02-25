@@ -130,3 +130,7 @@
 
 - 21st Century Astronomy (Sixth Edition)
   - Terms Dictionary: http://www.lamost.org/astrodict
+
+## Comments
+
+Not that hard but do require rich interest in the topic. The exam was a close-book cloze, mcq and calculations paper. It was not so hard since the questions are mostly foundable in previous homework. It is a great way to dig deeper behind those astronomy videos on YouTube.

@@ -30,3 +30,5 @@
 ## Comments
 
 Personally I am feeling very okay in both listening to the professor and catching up with the class, not a bad choice if you have a relatively firm english foundation.
+
+Got 4.0 and the professor was very kind and he is Canadian. Very enjoyable course.

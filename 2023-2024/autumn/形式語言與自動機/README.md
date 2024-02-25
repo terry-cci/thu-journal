@@ -38,3 +38,9 @@
 ### 參考書
 
 **'形式語言與自動機理論 (Elements of the Theory of Computation)'**
+
+## Comments
+
+Holy moly it is a second grade course, but it was not that hard actually. It is the subject that I spent the most time on going through the textbook and still got a 3.6. Although discrete maths was listed as a dependent course, I was learning the two at the same time and little was problematic.
+
+The mid-term open book was very easy so your grades can be secured, but the final exam was indeed difficult. Make sure not to forget the last few lectures of turing machines, the conceptual things were still seen in the exam.

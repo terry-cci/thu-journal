@@ -1,4 +1,4 @@
-# 線性代數 (Linear Algebra)
+# 體育 (1) (Freshman Physical Education)
 
 - 課程號: 10720011
 - 學分: 1
@@ -38,3 +38,7 @@
 Although on the course selection system, everyone is on the same teacher, you will have to go early on the first lesson to see your sub-class distribution.
 
 The first lesson we had a general body quality check (seems only our sub-class did that) and let us compare them at the end of the semester.
+
+And they did not let us compare that at last = =
+
+Prof. Du, Chao was very nice. Got 3.3 though. Just do what they tell you to do and it is over.

@@ -27,3 +27,5 @@ Refer to [the syllabus](syllabus.pdf)
 ## Comments
 
 - Feels a little bit too easy, but normal as a course for international students
+
+Got 4.0 as expected, the professor did not even finish the syllabus. We have not reached ODEs, volumes, etc.. A little bit of advanced maths you learned in high school is sufficient.

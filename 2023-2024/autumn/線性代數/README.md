@@ -43,3 +43,11 @@ Linear Algebra covers
 ### 敎材
 
 **'Introduction to Linear Algebra'**, 5th edition, by Gilbert Strang
+
+## Comments
+
+~~The professor faces a nearly empty classroom for too long QAQ~~
+
+Quite easy due to prior learning from ManChiWo, very useful. I did learn a lot new but it is easy to comprehend with the textbook. But it is much easier than the Chinese class, which results in falling behind in linear algebra course the next semester, that does not have an international varient.
+
+Past papers were crucial, same kind of problems with different numbers were seen.

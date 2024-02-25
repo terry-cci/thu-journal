@@ -35,3 +35,7 @@
 ## Comments
 
 - The first lecture was basically a general introduction, seems nothing to do with any evaluation. Should have been sleeping or doing homework ~~according to elder students~~.
+
+Besides preparing the presentations and writing book reports, there is little to be done. Just make sure that you are in the classroom in person, since random attendance check may take place.
+
+The exam was open-book, I just printed out the passage I prepared and copied it onto the exam paper on the day. Got 3.6.
