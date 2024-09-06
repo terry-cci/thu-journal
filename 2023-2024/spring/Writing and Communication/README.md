@@ -5,3 +5,8 @@
 - Prof: **耿弘明**
 - Credits: 2
 - Sessions: Mon. 0950
+
+
+## Comments
+
+nice prof. the content has somehow relation to hk and cantonese culture. a suprising 4.0. feel free to express your thoughts.

@@ -6,3 +6,7 @@ It used to be an English class, but this year we got a Chinese class. I wonder i
 - Textbook: [微積分教程（下），韓雲瑞，張廣遠，扈志明編，清華大學出版社](https://reserves.lib.tsinghua.edu.cn/Search/BookDetail?bookId=78effb49-43d8-4433-acef-f8e656f7a526)
 - Credits: 5
 - Sessions: Mon., Wed. night
+
+## Comments
+
+international class, very easy compared to chinese class. prof was so nice that he gave us all the formulas on the back of the exam paper.
