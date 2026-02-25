@@ -1,0 +1,194 @@
+word_t mtvec, stvec;
+assign mtvec = (csr_now.mtvec.mode == 2'b01 && raise_interrupt) ? { csr_now.mtvec.base+{ 28'b0, interrupt_num[3:0] }, 2'b00 } : { csr_now.mtvec.base, 2'b00 };
+assign stvec = (csr_now.stvec.mode == 2'b01 && raise_interrupt) ? { csr_now.stvec.base+{ 28'b0, interrupt_num[3:0] }, 2'b00 } : { csr_now.stvec.base, 2'b00 };
+
+// write port
+always_comb begin: csr_write
+    csr_nxt = csr_now;
+    cpu_mode_nxt = cpu_mode;
+    flush_target = pc;
+    csr_nxt.mhpmcounters[0] = csr_now.mhpmcounters[0] + 1; // mcycle
+    // exceptions check
+    if (raise_interrupt | raise_exception) begin
+        if (deleg_to_smode) begin
+            csr_nxt.scause = cause_num;
+            csr_nxt.sepc = pc;
+            csr_nxt.mstatus.spie = csr_now.mstatus.sie;
+            csr_nxt.mstatus.sie = 1'b0;
+            csr_nxt.mstatus.spp = cpu_mode[0];
+            csr_nxt.stval = exception_val;
+            cpu_mode_nxt = MODE_S;
+            flush_target = stvec;
+        end else begin
+            csr_nxt.mcause = cause_num;
+            csr_nxt.mepc = pc;
+            csr_nxt.mstatus.mpie = csr_now.mstatus.mie;
+            csr_nxt.mstatus.mie = 1'b0;
+            csr_nxt.mstatus.mpp = cpu_mode;
+            csr_nxt.mtval = exception_val;
+            cpu_mode_nxt = MODE_M;
+            flush_target = mtvec;
+        end
+    end else if (is_mret) begin
+        csr_nxt.mstatus.mie = csr_now.mstatus.mpie;
+        cpu_mode_nxt = csr_now.mstatus.mpp;
+        csr_nxt.mstatus.mpie = 1'b1;
+        csr_nxt.mstatus.mpp = MODE_U;
+        csr_nxt.mstatus.mprv = csr_now.mstatus.mpp == MODE_M ? 1'b0 : csr_now.mstatus.mprv;
+        flush_target = csr_now.mepc;
+        csr_nxt.mhpmcounters[2] = csr_now.mhpmcounters[2] + 1;
+    end else if (is_sret) begin
+        csr_nxt.mstatus.sie = csr_now.mstatus.spie;
+        cpu_mode_nxt = { 1'b0, csr_now.mstatus.spp };
+        csr_nxt.mstatus.spie = 1'b1;
+        csr_nxt.mstatus.spp = 1'b0;
+        flush_target = csr_now.sepc;
+        csr_nxt.mhpmcounters[2] = csr_now.mhpmcounters[2] + 1;
+    end else if (is_uret) begin
+        csr_nxt.mstatus.uie = csr_now.mstatus.upie;
+        cpu_mode_nxt = MODE_U;
+        csr_nxt.mstatus.upie = 1'b1;
+        flush_target = csr_now.uepc;
+        csr_nxt.mhpmcounters[2] = csr_now.mhpmcounters[2] + 1;
+    end else if (we) begin // csr write insts, write only legal bits
+        flush_target = { pc[31:2] + 30'b1, 2'b00 };
+        csr_nxt.mhpmcounters[2] = csr_now.mhpmcounters[2] + 1;
+        unique case (waddr[11:8])
+        4'h0: begin
+            unique case (waddr[7:0])
+            8'h01: csr_nxt.fcsr.fflags = wdata[4:0];
+            8'h02: csr_nxt.fcsr.frm = wdata[2:0];
+            8'h03: csr_nxt.fcsr = wdata & FCSR_WMASK;
+            8'h15: csr_nxt.seed = wdata & SEED_WMASK;
+            default: begin end
+            endcase
+        end
+        4'h1: begin
+            unique case (waddr[7:0])
+            8'h00: csr_nxt.mstatus = wdata & SSTATUS_WMASK; // sstatus actually.
+            8'h04: csr_nxt.mie = wdata & SIE_RWMASK & csr_now.mideleg; // sie actually.
+            8'h44: csr_nxt.mip = wdata & SIP_RWMASK & csr_now.mideleg; // sip actually.
+
+            8'h05: csr_nxt.stvec = wdata;
+            8'h06: csr_nxt.scounteren = wdata;
+            8'h0a: csr_nxt.senvcfg = wdata & SENVCFG_WMASK;
+            8'h40: csr_nxt.sscratch = wdata;
+            8'h41: csr_nxt.sepc = wdata;
+            8'h42: csr_nxt.scause = wdata;
+            8'h43: csr_nxt.stval = wdata;
+            8'h80: csr_nxt.satp = wdata;
+            default: begin end
+            endcase
+        end
+        4'h3: begin
+            unique case (waddr[7:5])
+            3'b000: begin
+                unique case (waddr[4:0])
+                5'h00: csr_nxt.mstatus = wdata & MSTATUS_WMASK;
+                5'h01: csr_nxt.misa = wdata & MISA_WMASK;
+                5'h02: csr_nxt.medeleg = wdata & MEDELEG_WMASK;
+                5'h03: csr_nxt.mideleg = wdata & MIDELEG_WMASK;
+                5'h04: csr_nxt.mie = wdata & MIE_WMASK;
+                5'h05: csr_nxt.mtvec = wdata;
+                5'h06: csr_nxt.mcounteren = wdata;
+                5'h10: csr_nxt.mstatush = wdata & MSTATUSH_WMASK;
+                5'h0a: csr_nxt.menvcfg[31:0] = wdata & MENVCFG_WMASK[31:0];
+                5'h1a: csr_nxt.menvcfg[63:32] = wdata & MENVCFG_WMASK[63:32];
+                default: begin end
+                endcase
+            end
+            3'b010: begin
+                unique case (waddr[4:0])
+                5'h00: csr_nxt.mscratch = wdata;
+                5'h01: csr_nxt.mepc = wdata & MEPC_WMASK;
+                5'h02: csr_nxt.mcause = wdata;
+                5'h03: csr_nxt.mtval = wdata;
+                5'h04: csr_nxt.mip = wdata & MIP_WMASK;
+                default: begin end
+                endcase
+            end
+            3'b101: begin
+                if (waddr[4]) begin // pmpaddrs
+                    csr_nxt.pmpaddrs[waddr[3:0]] = wdata;
+                end else if (waddr[3:2] == 2'b00) begin // pmpcfgs
+                    csr_nxt.pmpcfgs[waddr[1:0]] = wdata;
+                end
+            end
+            3'b001: begin
+                if (waddr[4:0] == 0) csr_nxt.mcountinhibit = wdata;
+                else csr_nxt.mhpmevents[waddr[4:0]] = wdata;
+            end
+            endcase
+        end
+        4'h7: begin
+            unique case (waddr[7:0])
+            8'h47: csr_nxt.mseccfg[31:0] = wdata & MSECCFG_WMASK[31:0];
+            8'h57: csr_nxt.mseccfg[63:32] = wdata & MSECCFG_WMASK[63:32];
+            default: begin end
+            endcase
+        end
+        4'hb: begin
+            unique case (waddr[7:5])
+            3'b000: csr_nxt.mhpmcounters[waddr[4:0]][31:0] = wdata;
+            3'b100: csr_nxt.mhpmcounters[waddr[4:0]][63:32] = wdata;
+            default: begin end
+            endcase
+        end
+        default: begin end
+        endcase
+    end else begin
+        csr_nxt.mhpmcounters[2] = csr_now.mhpmcounters[2] + (inst != INST_NOP); // minstret
+    end
+end
+
+always_ff @(posedge clk or posedge rst) begin: csr_reset_and_update
+    if (rst) begin
+        // csrs reset value
+        csr_now.uepc <= '0;
+        csr_now.fcsr <= '0;
+        csr_now.seed <= '0;
+        csr_now.mhpmcounters <= '0;
+        csr_now.mhpmevents <= '0;
+        csr_now.stvec <= '0;
+        csr_now.scounteren <= '0;
+        csr_now.senvcfg <= '0;
+        csr_now.sscratch <= '0;
+        csr_now.sepc <= '0;
+        csr_now.scause <= '0;
+        csr_now.stval <= '0;
+        csr_now.satp <= '0;
+        // read-onlys id CSRs
+        csr_now.mvendorid <= MVENDORID_INIT;
+        csr_now.marchid <= MARCHID_INIT;
+        csr_now.mimpid <= MIMPID_INIT;
+        csr_now.mhartid <= MHARTID_INIT;
+        csr_now.mconfigptr <= '0;
+        // mstatus
+        csr_now.mstatus <= MSTATUS_INIT;
+        csr_now.mstatush <= MSTATUSH_INIT;
+        csr_now.mie <= '0;
+        csr_now.mip <= '0;
+        // misa: WARL R/W
+        csr_now.misa <= MISA_INIT;
+        csr_now.medeleg <= '0;
+        csr_now.mideleg <= '0;
+        csr_now.mtvec <= '0;
+        csr_now.mcounteren <= '0;
+        csr_now.mcountinhibit <= '0;
+        csr_now.mscratch <= '0;
+        csr_now.mepc <= '0;
+        csr_now.mcause <= '0;
+        csr_now.mtval <= '0;
+        csr_now.menvcfg <= '0;
+        csr_now.mseccfg <= '0;
+        csr_now.pmpcfgs <= '0;
+        csr_now.pmpaddrs <= '0;
+    end else begin
+        csr_now <= csr_nxt;
+    end
+end
+
+always_ff @(posedge clk or posedge rst) begin: mode_reset_and_update
+    if (rst) cpu_mode <= MODE_M;
+    else cpu_mode <= cpu_mode_nxt;
+end
