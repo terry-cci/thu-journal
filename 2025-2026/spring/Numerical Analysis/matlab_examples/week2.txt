@@ -1,0 +1,16 @@
+>> eps
+ans =
+   2.2204e-16
+>> realmax
+ans =
+  1.7977e+308
+>> realmin
+ans =
+  2.2251e-308
+>> 0.1
+ans =
+    0.1000
+>> format hex
+>> 0.1
+ans =
+   3fb999999999999a

@@ -1,0 +1,80 @@
+>> A=[5, -1, -1;
+3, 1, -1;
+4, -2, 0]
+A =
+     5    -1    -1
+     3     1    -1
+     4    -2     0
+>> x=[1, 0, 0];
+>> x=A*x
+Error using  * 
+Incorrect dimensions for matrix multiplication. Check that the
+number of columns in the first matrix matches the number of
+rows in the second matrix. To operate on each element of the
+matrix individually, use TIMES (.*) for elementwise
+multiplication.
+Related documentation 
+>> x=[1, 0, 0]';
+>> x=A*x
+x =
+     5
+     3
+     4
+>> x=A*x
+x =
+    18
+    14
+    14
+>> x=A*x
+x =
+    62
+    54
+    44
+>> x=A*x
+x =
+   212
+   196
+   140
+>> x=A*x
+x =
+   724
+   692
+   456
+>> y=x;
+>> x=A*x
+x =
+        2472
+        2408
+        1512
+>> x./y
+ans =
+    3.4144
+    3.4798
+    3.3158
+>> x=A*x
+x =
+        8440
+        8312
+        5072
+>> x=A*x
+x =
+       28816
+       28560
+       17136
+>> x=A*x
+x =
+       98384
+       97872
+       58144
+>> y=x;
+>> x=A*x
+x =
+      335904
+      334880
+      197792
+>> x./y
+ans =
+    3.4142
+    3.4216
+    3.4018
+>> 
